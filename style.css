@@ -358,7 +358,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 200;
+  z-index: 10000;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s;
@@ -489,6 +489,16 @@ body {
 .battle-header p { color: var(--text2); margin-top: 0.2rem; font-size: 0.9rem; }
 
 /* Picker */
+.picker-filters {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
 .picker-search-wrap {
   max-width: 400px;
   margin: 0.8rem auto;
@@ -563,8 +573,8 @@ body {
   margin-bottom: 0.5rem;
 }
 .matchup-fighter img {
-  width: 160px;
-  height: 160px;
+  width: 220px;
+  height: 220px;
   object-fit: contain;
   background: var(--surface2);
   border-radius: var(--radius);
@@ -1006,7 +1016,7 @@ body {
   font-size: 0.85rem;
   font-weight: 600;
   box-shadow: var(--shadow-lg);
-  z-index: 300;
+  z-index: 10001;
   opacity: 0;
   transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
@@ -1044,15 +1054,28 @@ body {
   max-height: 520px;
   overflow-y: auto;
 }
-.palette-label {
-  font-size: 0.6rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.5);
-  text-align: center;
-  margin-bottom: 0.4rem;
+.part-cat-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  margin-bottom: 0.5rem;
 }
+.part-cat {
+  flex: 1;
+  min-width: 0;
+  padding: 0.3rem 0;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  border-radius: 6px;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s;
+}
+.part-cat:hover { background: rgba(255,255,255,0.15); color: #fff; }
+.part-cat.active { background: var(--yellow); color: var(--green-dark); }
 .parts-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

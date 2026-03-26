@@ -115,6 +115,21 @@
         <h2>⚔️ Choose Your Fighter!</h2>
         <p>Pick a dinosaur for battle. CPU will choose a random opponent.</p>
       </div>
+      <div class="picker-filters">
+        <div class="pills" id="picker-period-pills">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="Permian">Permian</button>
+          <button class="pill" data-value="Triassic">Triassic</button>
+          <button class="pill" data-value="Jurassic">Jurassic</button>
+          <button class="pill" data-value="Cretaceous">Cretaceous</button>
+        </div>
+        <div class="pills" id="picker-habitat-pills">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="land">Land</button>
+          <button class="pill" data-value="air">Air</button>
+          <button class="pill" data-value="water">Water</button>
+        </div>
+      </div>
       <div class="picker-search-wrap">
         <input type="text" id="picker-search" placeholder="Search dinosaurs...">
       </div>
@@ -131,13 +146,14 @@
           <div class="mu-label">YOU</div>
           <img id="mu-player-img" src="" alt="">
           <div class="mu-name" id="mu-player-name"></div>
+          <button class="reroll-btn" id="reroll-player-btn">🔄 Change Pick</button>
         </div>
         <div class="matchup-vs">VS</div>
         <div class="matchup-fighter" id="mu-cpu">
           <div class="mu-label">CPU</div>
           <img id="mu-cpu-img" src="" alt="">
           <div class="mu-name" id="mu-cpu-name"></div>
-          <button class="reroll-btn" id="reroll-btn">🎲 Reroll</button>
+          <button class="reroll-btn" id="reroll-btn">🎲 Reroll CPU</button>
         </div>
       </div>
       <div class="matchup-actions">
@@ -214,18 +230,24 @@
   <section class="tab-content" id="tab-create">
     <div class="create-header">
       <h2>🎨 Make Your Own Dinosaur</h2>
-      <p>Pick parts, give it a name, choose a color &mdash; make it yours!</p>
+      <p>Pick parts from each category, arrange them, and make something silly!</p>
     </div>
     <div class="create-layout">
       <!-- Left: parts palette -->
       <div class="parts-palette">
-        <div class="palette-label">TAP TO ADD PARTS</div>
+        <div class="part-cat-tabs" id="part-cat-tabs">
+          <button class="part-cat active" data-cat="head">Heads</button>
+          <button class="part-cat" data-cat="body">Bodies</button>
+          <button class="part-cat" data-cat="tail">Tails</button>
+          <button class="part-cat" data-cat="legs">Legs</button>
+          <button class="part-cat" data-cat="extra">Extras</button>
+        </div>
         <div class="parts-grid" id="parts-grid"></div>
       </div>
       <!-- Center: canvas -->
       <div class="create-canvas-area">
         <canvas id="create-canvas" width="560" height="480"></canvas>
-        <div class="canvas-hint" id="canvas-hint">Tap dino parts on the left to build your creature!</div>
+        <div class="canvas-hint" id="canvas-hint">Pick a head, body, tail &amp; legs to build your dino!</div>
       </div>
       <!-- Right: controls -->
       <div class="create-controls">
@@ -237,13 +259,13 @@
         <div class="ctrl-section">
           <label class="ctrl-label">SIZE</label>
           <div class="size-pills" id="size-pills">
-            <button class="size-pill" data-size="0.5">Small</button>
+            <button class="size-pill" data-size="0.6">Small</button>
             <button class="size-pill active" data-size="1">Medium</button>
-            <button class="size-pill" data-size="1.8">Huge</button>
+            <button class="size-pill" data-size="1.6">Huge</button>
           </div>
         </div>
         <div class="ctrl-section">
-          <label class="ctrl-label">COLOR TINT</label>
+          <label class="ctrl-label">COLOR</label>
           <div class="color-swatches" id="color-swatches">
             <button class="swatch active" data-color="none" style="background:linear-gradient(135deg,#ddd,#fff)" title="Original"></button>
             <button class="swatch" data-color="#ef5350" style="background:#ef5350" title="Red"></button>
@@ -256,12 +278,9 @@
           </div>
         </div>
         <div class="ctrl-section ctrl-actions">
-          <button class="btn-primary" id="create-share-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-            Share Creation
-          </button>
-          <button class="btn-secondary" id="create-download-btn">Download</button>
-          <button class="btn-ghost" id="create-clear-btn">Clear Canvas</button>
+          <button class="btn-primary" id="create-download-btn">Download PNG</button>
+          <button class="btn-secondary" id="create-share-btn">Share</button>
+          <button class="btn-ghost" id="create-clear-btn">Clear All</button>
         </div>
       </div>
     </div>

@@ -1,0 +1,48 @@
+{
+  "categories": [
+    { "id": "head", "label": "Heads", "slot": "top" },
+    { "id": "body", "label": "Bodies", "slot": "center" },
+    { "id": "tail", "label": "Tails", "slot": "right" },
+    { "id": "legs", "label": "Legs", "slot": "bottom" },
+    { "id": "extra", "label": "Extras", "slot": "any" }
+  ],
+  "parts": [
+    { "id": "head-trex", "cat": "head", "label": "T-Rex Head", "color": "#4a7c4a", "svg": "M0,20 Q5,0 25,5 Q40,0 45,15 L50,18 L45,22 Q40,35 25,30 Q10,35 0,20Z", "w": 50, "h": 35, "ax": 25, "ay": 30 },
+    { "id": "head-raptor", "cat": "head", "label": "Raptor Head", "color": "#e65100", "svg": "M0,15 Q10,0 30,5 L55,2 L50,10 Q45,18 30,20 Q10,25 0,15Z", "w": 55, "h": 25, "ax": 25, "ay": 20 },
+    { "id": "head-triceratops", "cat": "head", "label": "Triceratops Head", "color": "#8d6e63", "svg": "M5,30 Q0,15 15,5 Q30,0 40,10 L45,8 L43,15 L50,12 L47,18 Q45,30 30,35 Q15,38 5,30Z M20,18 L22,22 M30,16 L32,20", "w": 50, "h": 38, "ax": 25, "ay": 35 },
+    { "id": "head-long", "cat": "head", "label": "Long Neck Head", "color": "#66bb6a", "svg": "M0,15 Q5,5 15,5 Q25,2 30,10 Q28,18 20,18 Q10,20 0,15Z", "w": 30, "h": 20, "ax": 15, "ay": 18 },
+    { "id": "head-crested", "cat": "head", "label": "Crested Head", "color": "#42a5f5", "svg": "M5,35 Q0,20 15,10 Q20,0 25,5 Q30,0 35,10 Q45,15 40,30 Q30,40 15,38 Q8,38 5,35Z", "w": 45, "h": 40, "ax": 22, "ay": 38 },
+    { "id": "head-duck", "cat": "head", "label": "Duck Bill Head", "color": "#ffa726", "svg": "M0,15 Q5,5 20,8 Q30,5 35,10 L50,12 L48,18 L35,17 Q30,25 20,22 Q5,25 0,15Z", "w": 50, "h": 25, "ax": 20, "ay": 22 },
+    { "id": "head-armored", "cat": "head", "label": "Armored Head", "color": "#78909c", "svg": "M5,20 Q5,5 20,3 Q35,0 40,10 Q45,5 48,12 Q45,25 30,28 Q15,30 5,20Z M12,10 L14,14 M28,8 L30,12", "w": 48, "h": 30, "ax": 24, "ay": 28 },
+    { "id": "head-sail", "cat": "head", "label": "Sail Head", "color": "#ef5350", "svg": "M5,30 Q0,20 10,12 Q15,0 20,5 Q25,8 22,15 Q35,10 40,22 Q38,32 25,35 Q12,36 5,30Z", "w": 40, "h": 36, "ax": 20, "ay": 35 },
+
+    { "id": "body-round", "cat": "body", "label": "Round Body", "color": "#66bb6a", "svg": "M10,5 Q40,0 70,5 Q85,15 80,35 Q70,50 40,50 Q10,50 5,35 Q0,15 10,5Z", "w": 85, "h": 50, "ax": 42, "ay": 5, "bx": 42, "by": 50 },
+    { "id": "body-slim", "cat": "body", "label": "Slim Body", "color": "#e65100", "svg": "M10,5 Q35,0 60,5 Q72,12 70,25 Q65,38 35,40 Q10,38 5,25 Q3,12 10,5Z", "w": 72, "h": 40, "ax": 36, "ay": 5, "bx": 36, "by": 40 },
+    { "id": "body-armored", "cat": "body", "label": "Armored Body", "color": "#78909c", "svg": "M10,8 Q40,0 75,8 Q90,20 85,40 Q75,55 42,55 Q10,55 5,40 Q0,20 10,8Z M20,15 L25,15 L22,20Z M40,12 L45,12 L42,18Z M60,15 L65,15 L62,20Z", "w": 90, "h": 55, "ax": 45, "ay": 8, "bx": 45, "by": 55 },
+    { "id": "body-huge", "cat": "body", "label": "Huge Body", "color": "#8d6e63", "svg": "M15,10 Q55,0 95,10 Q110,30 105,55 Q90,75 55,75 Q20,75 5,55 Q0,30 15,10Z", "w": 110, "h": 75, "ax": 55, "ay": 10, "bx": 55, "by": 75 },
+    { "id": "body-feathered", "cat": "body", "label": "Feathered Body", "color": "#ab47bc", "svg": "M10,8 Q30,0 55,5 Q68,2 72,10 Q75,20 70,30 Q60,42 35,42 Q10,40 5,28 Q0,15 10,8Z", "w": 75, "h": 42, "ax": 37, "ay": 5, "bx": 37, "by": 42 },
+    { "id": "body-long", "cat": "body", "label": "Long Body", "color": "#42a5f5", "svg": "M5,10 Q30,0 70,5 Q95,10 100,22 Q95,35 70,38 Q30,40 5,32 Q0,20 5,10Z", "w": 100, "h": 40, "ax": 50, "ay": 5, "bx": 50, "by": 38 },
+
+    { "id": "tail-spike", "cat": "tail", "label": "Spike Tail", "color": "#ef5350", "svg": "M0,15 Q15,10 30,12 Q45,8 55,5 L60,0 L58,10 L65,5 L60,15 Q45,18 30,18 Q15,20 0,18Z", "w": 65, "h": 20, "ax": 0, "ay": 15 },
+    { "id": "tail-club", "cat": "tail", "label": "Club Tail", "color": "#78909c", "svg": "M0,12 Q20,8 40,10 Q55,5 60,10 Q68,5 65,15 Q68,25 60,20 Q55,25 40,18 Q20,20 0,16Z", "w": 68, "h": 25, "ax": 0, "ay": 14 },
+    { "id": "tail-long", "cat": "tail", "label": "Long Tail", "color": "#66bb6a", "svg": "M0,10 Q25,5 50,8 Q75,5 90,3 Q95,8 90,12 Q75,15 50,14 Q25,16 0,14Z", "w": 95, "h": 16, "ax": 0, "ay": 12 },
+    { "id": "tail-feather", "cat": "tail", "label": "Feather Tail", "color": "#ab47bc", "svg": "M0,15 Q15,12 30,14 Q40,8 50,3 L55,8 Q48,12 52,5 L58,12 Q50,18 40,20 Q25,20 0,18Z", "w": 58, "h": 22, "ax": 0, "ay": 16 },
+    { "id": "tail-whip", "cat": "tail", "label": "Whip Tail", "color": "#ffa726", "svg": "M0,10 Q30,5 60,8 Q80,4 95,2 Q98,6 95,10 Q80,12 60,12 Q30,15 0,14Z", "w": 98, "h": 15, "ax": 0, "ay": 12 },
+    { "id": "tail-fish", "cat": "tail", "label": "Fish Tail", "color": "#42a5f5", "svg": "M0,12 Q15,10 30,12 Q40,5 50,0 L55,8 L50,15 Q55,22 50,28 L45,20 Q40,25 30,18 Q15,18 0,16Z", "w": 55, "h": 28, "ax": 0, "ay": 14 },
+
+    { "id": "legs-big", "cat": "legs", "label": "Big Legs", "color": "#4a7c4a", "svg": "M10,0 L8,20 L3,22 L0,35 L8,35 L12,22 L18,22 L22,35 L30,35 L25,22 L20,20 L18,0Z M40,0 L38,20 L33,22 L30,35 L38,35 L42,22 L48,22 L52,35 L60,35 L55,22 L50,20 L48,0Z", "w": 60, "h": 35, "ax": 30, "ay": 0 },
+    { "id": "legs-small", "cat": "legs", "label": "Small Legs", "color": "#e65100", "svg": "M8,0 L6,12 L3,14 L0,22 L6,22 L10,14 L12,0Z M25,0 L23,12 L20,14 L17,22 L23,22 L27,14 L29,0Z", "w": 29, "h": 22, "ax": 15, "ay": 0 },
+    { "id": "legs-four", "cat": "legs", "label": "Four Legs", "color": "#8d6e63", "svg": "M5,0 L3,18 L0,25 L6,25 L8,18 L10,0Z M20,0 L18,18 L15,25 L21,25 L23,18 L25,0Z M40,0 L38,18 L35,25 L41,25 L43,18 L45,0Z M55,0 L53,18 L50,25 L56,25 L58,18 L60,0Z", "w": 60, "h": 25, "ax": 30, "ay": 0 },
+    { "id": "legs-flippers", "cat": "legs", "label": "Flippers", "color": "#42a5f5", "svg": "M5,0 Q0,10 3,18 Q8,22 15,20 Q12,12 10,0Z M30,0 Q25,10 28,18 Q33,22 40,20 Q37,12 35,0Z", "w": 40, "h": 22, "ax": 20, "ay": 0 },
+
+    { "id": "extra-wings", "cat": "extra", "label": "Wings", "color": "#7b1fa2", "svg": "M30,25 Q20,15 5,5 Q0,0 3,10 Q0,18 8,20 Q15,22 25,25Z M30,25 Q40,15 55,5 Q60,0 57,10 Q60,18 52,20 Q45,22 35,25Z", "w": 60, "h": 28, "ax": 30, "ay": 25 },
+    { "id": "extra-horns", "cat": "extra", "label": "Horns", "color": "#ffa726", "svg": "M10,20 L5,0 L15,15Z M25,20 L30,0 L20,15Z", "w": 35, "h": 20, "ax": 17, "ay": 20 },
+    { "id": "extra-spikes", "cat": "extra", "label": "Back Spikes", "color": "#ef5350", "svg": "M0,20 L5,5 L10,20 L15,2 L20,20 L25,5 L30,20 L35,2 L40,20 L45,8 L50,20Z", "w": 50, "h": 20, "ax": 25, "ay": 20 },
+    { "id": "extra-plates", "cat": "extra", "label": "Back Plates", "color": "#66bb6a", "svg": "M5,22 Q3,12 8,5 Q12,0 16,8 Q18,15 15,22Z M20,22 Q18,10 23,3 Q27,0 31,8 Q33,15 30,22Z M35,22 Q33,12 38,5 Q42,0 46,8 Q48,15 45,22Z", "w": 50, "h": 22, "ax": 25, "ay": 22 },
+    { "id": "extra-sail", "cat": "extra", "label": "Back Sail", "color": "#ec407a", "svg": "M0,30 Q5,15 15,5 Q25,0 35,5 Q45,15 50,30Z", "w": 50, "h": 30, "ax": 25, "ay": 30 },
+    { "id": "extra-frill", "cat": "extra", "label": "Neck Frill", "color": "#ffa726", "svg": "M5,25 Q0,15 10,5 Q20,0 30,0 Q40,0 50,5 Q60,15 55,25 Q45,20 30,18 Q15,20 5,25Z", "w": 60, "h": 25, "ax": 30, "ay": 25 },
+    { "id": "extra-claws", "cat": "extra", "label": "Big Claws", "color": "#78909c", "svg": "M5,0 Q0,8 2,15 L8,12 Q10,5 8,0Z M15,0 Q10,8 12,15 L18,12 Q20,5 18,0Z M25,0 Q20,8 22,15 L28,12 Q30,5 28,0Z", "w": 30, "h": 15, "ax": 15, "ay": 0 },
+    { "id": "extra-teeth", "cat": "extra", "label": "Big Teeth", "color": "#ffffff", "svg": "M0,0 L3,10 L6,0 L9,10 L12,0 L15,10 L18,0 L21,10 L24,0Z", "w": 24, "h": 10, "ax": 12, "ay": 0 },
+    { "id": "extra-eyes", "cat": "extra", "label": "Silly Eyes", "color": "#ffffff", "svg": "M5,10 A8,8 0 1,1 21,10 A8,8 0 1,1 5,10Z M29,10 A8,8 0 1,1 45,10 A8,8 0 1,1 29,10Z M10,10 A3,3 0 1,1 16,10 A3,3 0 1,1 10,10Z M34,10 A3,3 0 1,1 40,10 A3,3 0 1,1 34,10Z", "w": 50, "h": 22, "ax": 25, "ay": 11, "stroke": "#333", "fill2": "#333" }
+  ]
+}

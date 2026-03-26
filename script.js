@@ -300,11 +300,15 @@
      ══════════════════════════════════════════════════════ */
   const pickerGrid = document.getElementById('picker-grid');
   const pickerSearch = document.getElementById('picker-search');
+  let pickerFilters = { period: 'all', habitat: 'all', search: '' };
 
-  function renderPicker(filter = '') {
-    const filtered = filter
-      ? catalog.filter(s => s.displayName.toLowerCase().includes(filter) || s.slug.includes(filter))
-      : catalog;
+  function renderPicker() {
+    const filtered = catalog.filter(s => {
+      if (pickerFilters.period !== 'all' && s.periodGroup !== pickerFilters.period) return false;
+      if (pickerFilters.habitat !== 'all' && s.habitatNormalized !== pickerFilters.habitat) return false;
+      if (pickerFilters.search && !s.displayName.toLowerCase().includes(pickerFilters.search) && !s.slug.includes(pickerFilters.search)) return false;
+      return true;
+    });
     pickerGrid.innerHTML = filtered.map(s => `
       <div class="picker-card" data-slug="${s.slug}">
         <img src="${s.localOptimizedImage}" alt="${s.displayName}" loading="lazy">
@@ -313,7 +317,28 @@
     `).join('');
   }
 
-  pickerSearch.addEventListener('input', e => renderPicker(e.target.value.toLowerCase()));
+  pickerSearch.addEventListener('input', e => {
+    pickerFilters.search = e.target.value.toLowerCase();
+    renderPicker();
+  });
+
+  document.getElementById('picker-period-pills').addEventListener('click', e => {
+    const btn = e.target.closest('.pill');
+    if (!btn) return;
+    document.querySelectorAll('#picker-period-pills .pill').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    pickerFilters.period = btn.dataset.value;
+    renderPicker();
+  });
+
+  document.getElementById('picker-habitat-pills').addEventListener('click', e => {
+    const btn = e.target.closest('.pill');
+    if (!btn) return;
+    document.querySelectorAll('#picker-habitat-pills .pill').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    pickerFilters.habitat = btn.dataset.value;
+    renderPicker();
+  });
 
   pickerGrid.addEventListener('click', e => {
     const card = e.target.closest('.picker-card');
@@ -346,6 +371,7 @@
   });
 
   document.getElementById('back-pick-btn').addEventListener('click', () => showPhase('battle-pick'));
+  document.getElementById('reroll-player-btn').addEventListener('click', () => showPhase('battle-pick'));
 
   document.getElementById('start-fight-btn').addEventListener('click', () => {
     autoBattle = false;
@@ -701,56 +727,66 @@
   }
 
   /* ══════════════════════════════════════════════════════
-     CREATE DINO TAB
+     CREATE DINO TAB — SVG Parts Builder
      ══════════════════════════════════════════════════════ */
   const DINO_NAMES_FIRST = [
     'Mega','Thunder','Blaze','Frost','Shadow','Storm','Turbo','Spike',
     'Razor','Fang','Iron','Crystal','Chaos','Nitro','Cosmic','Magma',
-    'Phantom','Neon','Pixel','Ultra','Star','Atomic','Hyper','Solar',
     'Crunchy','Fluffy','Silly','Wobble','Grumpy','Jolly','Snappy','Dizzy',
   ];
   const DINO_NAMES_SECOND = [
     'saurus','raptor','don','tops','dactyl','claw','tooth','bite',
-    'horn','tail','wing','jaw','skull','spine','scale','frill',
-    'chomp','stomp','zilla','tron','asaur','odon','nyx','rex',
-    'munch','wiggle','snout','plop','bonk','flop','derp','noodle',
+    'horn','tail','wing','jaw','skull','spine','chomp','stomp',
+    'zilla','tron','munch','wiggle','snout','plop','bonk','noodle',
   ];
 
+  let partsData = null;
   let placedParts = [];
   let createScale = 1;
   let createColor = 'none';
-  let loadedImages = {};
   let dragPart = null;
+  let currentCat = 'head';
 
-  function initCreateTab() {
-    const partsGrid = document.getElementById('parts-grid');
-    // Use catalog dino images as "parts"
-    catalog.forEach(s => {
-      const thumb = document.createElement('div');
-      thumb.className = 'part-thumb';
-      thumb.innerHTML = `<img src="${s.localOptimizedImage}" alt="${s.displayName}" loading="lazy">`;
-      thumb.addEventListener('click', () => addPartToCanvas(s));
-      partsGrid.appendChild(thumb);
-    });
+  function generateDinoName() {
+    const a = DINO_NAMES_FIRST[Math.floor(Math.random() * DINO_NAMES_FIRST.length)];
+    const b = DINO_NAMES_SECOND[Math.floor(Math.random() * DINO_NAMES_SECOND.length)];
+    return a + b;
+  }
 
-    // Random name button
-    document.getElementById('random-name-btn').addEventListener('click', () => {
-      document.getElementById('create-name').value = generateDinoName();
-    });
-    // Auto-fill a name on load
+  async function initCreateTab() {
+    const resp = await fetch('data/dino-parts.json');
+    partsData = await resp.json();
+    renderPartsPalette('head');
     document.getElementById('create-name').value = generateDinoName();
 
-    // Size pills
+    // Category tabs
+    document.getElementById('part-cat-tabs').addEventListener('click', e => {
+      const btn = e.target.closest('.part-cat');
+      if (!btn) return;
+      document.querySelectorAll('.part-cat').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      currentCat = btn.dataset.cat;
+      renderPartsPalette(currentCat);
+    });
+
+    // Random name
+    document.getElementById('random-name-btn').addEventListener('click', () => {
+      document.getElementById('create-name').value = generateDinoName();
+      redrawCanvas();
+    });
+
+    // Size
     document.getElementById('size-pills').addEventListener('click', e => {
       const pill = e.target.closest('.size-pill');
       if (!pill) return;
       document.querySelectorAll('.size-pill').forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
       createScale = parseFloat(pill.dataset.size);
+      autoArrange();
       redrawCanvas();
     });
 
-    // Color swatches
+    // Color
     document.getElementById('color-swatches').addEventListener('click', e => {
       const sw = e.target.closest('.swatch');
       if (!sw) return;
@@ -760,14 +796,14 @@
       redrawCanvas();
     });
 
-    // Canvas drag support
+    // Canvas drag
     const canvas = document.getElementById('create-canvas');
-    canvas.addEventListener('mousedown', onCanvasPointerDown);
-    canvas.addEventListener('mousemove', onCanvasPointerMove);
-    canvas.addEventListener('mouseup', onCanvasPointerUp);
-    canvas.addEventListener('touchstart', onCanvasTouchStart, { passive: false });
-    canvas.addEventListener('touchmove', onCanvasTouchMove, { passive: false });
-    canvas.addEventListener('touchend', onCanvasPointerUp);
+    canvas.addEventListener('mousedown', onCanvasDown);
+    canvas.addEventListener('mousemove', onCanvasMove);
+    canvas.addEventListener('mouseup', () => { dragPart = null; });
+    canvas.addEventListener('touchstart', e => { e.preventDefault(); onCanvasDown(e); }, { passive: false });
+    canvas.addEventListener('touchmove', e => { e.preventDefault(); onCanvasMove(e); }, { passive: false });
+    canvas.addEventListener('touchend', () => { dragPart = null; });
 
     // Clear
     document.getElementById('create-clear-btn').addEventListener('click', () => {
@@ -776,213 +812,220 @@
       document.getElementById('canvas-hint').classList.remove('hidden');
     });
 
-    // Share
-    document.getElementById('create-share-btn').addEventListener('click', shareCreation);
+    // Download & Share
     document.getElementById('create-download-btn').addEventListener('click', downloadCreation);
+    document.getElementById('create-share-btn').addEventListener('click', shareCreation);
+    document.getElementById('create-name')?.addEventListener('input', redrawCanvas);
   }
 
-  function generateDinoName() {
-    const a = DINO_NAMES_FIRST[Math.floor(Math.random() * DINO_NAMES_FIRST.length)];
-    const b = DINO_NAMES_SECOND[Math.floor(Math.random() * DINO_NAMES_SECOND.length)];
-    return a + b;
+  function renderPartsPalette(cat) {
+    const grid = document.getElementById('parts-grid');
+    const parts = partsData.parts.filter(p => p.cat === cat);
+    grid.innerHTML = parts.map(p => {
+      const svgMarkup = `<svg viewBox="0 0 ${p.w} ${p.h}" width="70" height="${70 * p.h / p.w}">
+        <path d="${p.svg}" fill="${p.color}" stroke="${p.stroke || '#333'}" stroke-width="1.5"/>
+      </svg>`;
+      return `<div class="part-thumb" data-id="${p.id}" title="${p.label}">${svgMarkup}<div style="font-size:0.55rem;color:rgba(255,255,255,0.6);text-align:center;margin-top:2px">${p.label}</div></div>`;
+    }).join('');
+
+    grid.querySelectorAll('.part-thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const partDef = partsData.parts.find(p => p.id === thumb.dataset.id);
+        if (partDef) addPart(partDef);
+      });
+    });
   }
 
-  function addPartToCanvas(species) {
+  function addPart(partDef) {
     document.getElementById('canvas-hint').classList.add('hidden');
-    const canvas = document.getElementById('create-canvas');
-    const rect = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / rect.width;
-    // Place in a random-ish position near center
-    const cx = canvas.width / 2 + (Math.random() - 0.5) * 200;
-    const cy = canvas.height / 2 + (Math.random() - 0.5) * 150;
-
-    const part = {
-      slug: species.slug,
-      src: species.localOptimizedImage,
-      x: cx,
-      y: cy,
-      w: 100,
-      h: 100,
-      rotation: (Math.random() - 0.5) * 30,
-      flipX: Math.random() > 0.5,
-    };
-
-    // Preload image if not loaded
-    if (!loadedImages[part.src]) {
-      const img = new Image();
-      img.onload = () => {
-        loadedImages[part.src] = img;
-        redrawCanvas();
-      };
-      img.src = part.src;
-    }
-
-    placedParts.push(part);
+    placedParts.push({
+      id: partDef.id,
+      cat: partDef.cat,
+      svg: partDef.svg,
+      color: partDef.color,
+      stroke: partDef.stroke,
+      label: partDef.label,
+      w: partDef.w,
+      h: partDef.h,
+      x: 0, y: 0, // will be set by autoArrange
+    });
+    autoArrange();
     redrawCanvas();
   }
 
-  function getCanvasCoord(e, canvas) {
-    const rect = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / rect.width;
-    const scaleY = canvas.height / rect.height;
-    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-    return {
-      x: (clientX - rect.left) * scaleX,
-      y: (clientY - rect.top) * scaleY,
-    };
+  // Auto-arrange: place parts in logical positions
+  function autoArrange() {
+    const canvas = document.getElementById('create-canvas');
+    const cx = canvas.width / 2;
+    const cy = canvas.height / 2;
+    const s = createScale;
+
+    // Find parts by category
+    const bodies = placedParts.filter(p => p.cat === 'body');
+    const heads = placedParts.filter(p => p.cat === 'head');
+    const tails = placedParts.filter(p => p.cat === 'tail');
+    const legs = placedParts.filter(p => p.cat === 'legs');
+    const extras = placedParts.filter(p => p.cat === 'extra');
+
+    // Body goes center
+    bodies.forEach((p, i) => {
+      p.x = cx + i * 20;
+      p.y = cy;
+    });
+
+    // Head goes above-left of body
+    const bodyTop = bodies.length > 0 ? bodies[0].y - (bodies[0].h * s * 1.5) / 2 : cy - 80;
+    const bodyLeft = bodies.length > 0 ? bodies[0].x - (bodies[0].w * s * 1.5) / 3 : cx - 60;
+    heads.forEach((p, i) => {
+      p.x = bodyLeft + i * 15;
+      p.y = bodyTop - (p.h * s * 1.5) / 3 + i * 10;
+    });
+
+    // Tail goes right of body
+    const bodyRight = bodies.length > 0 ? bodies[0].x + (bodies[0].w * s * 1.5) / 2.5 : cx + 60;
+    tails.forEach((p, i) => {
+      p.x = bodyRight + (p.w * s * 1.5) / 3 + i * 15;
+      p.y = cy + i * 8;
+    });
+
+    // Legs go below body
+    const bodyBottom = bodies.length > 0 ? bodies[0].y + (bodies[0].h * s * 1.5) / 2.5 : cy + 50;
+    legs.forEach((p, i) => {
+      p.x = cx + i * 15;
+      p.y = bodyBottom + (p.h * s * 1.5) / 3;
+    });
+
+    // Extras go above body (spikes, wings, etc)
+    extras.forEach((p, i) => {
+      p.x = cx + (i - extras.length / 2) * 30;
+      p.y = bodyTop - 10 + i * 12;
+    });
   }
 
-  function hitTestPart(mx, my) {
-    // Check from top (last placed) to bottom
+  function getCoord(e, canvas) {
+    const rect = canvas.getBoundingClientRect();
+    const sx = canvas.width / rect.width;
+    const sy = canvas.height / rect.height;
+    const px = e.touches ? e.touches[0].clientX : e.clientX;
+    const py = e.touches ? e.touches[0].clientY : e.clientY;
+    return { x: (px - rect.left) * sx, y: (py - rect.top) * sy };
+  }
+
+  function onCanvasDown(e) {
+    const canvas = document.getElementById('create-canvas');
+    const { x, y } = getCoord(e, canvas);
+    const s = createScale * 1.5;
     for (let i = placedParts.length - 1; i >= 0; i--) {
       const p = placedParts[i];
-      const s = createScale;
       const hw = (p.w * s) / 2;
       const hh = (p.h * s) / 2;
-      if (mx >= p.x - hw && mx <= p.x + hw && my >= p.y - hh && my <= p.y + hh) {
-        return i;
+      if (x >= p.x - hw && x <= p.x + hw && y >= p.y - hh && y <= p.y + hh) {
+        dragPart = { idx: i, ox: x - p.x, oy: y - p.y };
+        const part = placedParts.splice(i, 1)[0];
+        placedParts.push(part);
+        dragPart.idx = placedParts.length - 1;
+        return;
       }
     }
-    return -1;
   }
 
-  function onCanvasPointerDown(e) {
-    const canvas = document.getElementById('create-canvas');
-    const { x, y } = getCanvasCoord(e, canvas);
-    const idx = hitTestPart(x, y);
-    if (idx >= 0) {
-      dragPart = { idx, offsetX: x - placedParts[idx].x, offsetY: y - placedParts[idx].y };
-      // Move to front
-      const part = placedParts.splice(idx, 1)[0];
-      placedParts.push(part);
-      dragPart.idx = placedParts.length - 1;
-    }
-  }
-
-  function onCanvasTouchStart(e) {
-    e.preventDefault();
-    onCanvasPointerDown(e);
-  }
-
-  function onCanvasPointerMove(e) {
+  function onCanvasMove(e) {
     if (!dragPart) return;
     const canvas = document.getElementById('create-canvas');
-    const { x, y } = getCanvasCoord(e, canvas);
-    placedParts[dragPart.idx].x = x - dragPart.offsetX;
-    placedParts[dragPart.idx].y = y - dragPart.offsetY;
+    const { x, y } = getCoord(e, canvas);
+    placedParts[dragPart.idx].x = x - dragPart.ox;
+    placedParts[dragPart.idx].y = y - dragPart.oy;
     redrawCanvas();
-  }
-
-  function onCanvasTouchMove(e) {
-    e.preventDefault();
-    onCanvasPointerMove(e);
-  }
-
-  function onCanvasPointerUp() {
-    dragPart = null;
   }
 
   function redrawCanvas() {
     const canvas = document.getElementById('create-canvas');
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // White background
     ctx.fillStyle = '#ffffff';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Draw each placed part
-    for (const part of placedParts) {
-      const img = loadedImages[part.src];
-      if (!img) continue;
-      const s = createScale;
+    const s = createScale * 1.5;
+
+    // Draw order: legs, body, extras, tail, head (so head is on top)
+    const order = ['legs', 'body', 'extra', 'tail', 'head'];
+    const sorted = [...placedParts].sort((a, b) => order.indexOf(a.cat) - order.indexOf(b.cat));
+
+    for (const part of sorted) {
       const w = part.w * s;
       const h = part.h * s;
+      const color = createColor !== 'none' ? createColor : part.color;
 
-      ctx.save();
-      ctx.translate(part.x, part.y);
-      ctx.rotate((part.rotation * Math.PI) / 180);
-      if (part.flipX) ctx.scale(-1, 1);
-
-      // Draw image, optionally tinted
-      if (createColor !== 'none') {
-        // Render tinted version via offscreen canvas
-        const off = document.createElement('canvas');
-        off.width = Math.ceil(w);
-        off.height = Math.ceil(h);
-        const oc = off.getContext('2d');
-        oc.drawImage(img, 0, 0, w, h);
-        oc.globalCompositeOperation = 'source-atop';
-        oc.fillStyle = createColor;
-        oc.globalAlpha = 0.4;
-        oc.fillRect(0, 0, w, h);
-        ctx.drawImage(off, -w / 2, -h / 2);
-      } else {
-        ctx.drawImage(img, -w / 2, -h / 2, w, h);
-      }
-
-      ctx.restore();
+      // Render SVG path to canvas
+      const svgStr = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${part.w} ${part.h}" width="${Math.ceil(w)}" height="${Math.ceil(h)}">
+        <path d="${part.svg}" fill="${color}" stroke="${part.stroke || '#333'}" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>`;
+      const blob = new Blob([svgStr], { type: 'image/svg+xml' });
+      const url = URL.createObjectURL(blob);
+      const img = new Image();
+      img.onload = () => {
+        ctx.drawImage(img, part.x - w / 2, part.y - h / 2, w, h);
+        URL.revokeObjectURL(url);
+        drawWatermark(ctx, canvas);
+      };
+      img.src = url;
     }
 
-    // Watermark
-    if (placedParts.length > 0) {
-      const name = document.getElementById('create-name').value.trim() || 'Unnamed';
-      const trainer = document.getElementById('trainer-name')?.value.trim() || '';
-      ctx.save();
-      ctx.font = '600 14px -apple-system, sans-serif';
-      ctx.fillStyle = 'rgba(0,0,0,0.25)';
-      ctx.textAlign = 'right';
-      const credit = trainer ? `${name} - made by ${trainer} in Dino World` : `${name} - Dino World`;
-      ctx.fillText(credit, canvas.width - 12, canvas.height - 12);
-      ctx.restore();
-    }
+    // If no parts, draw watermark immediately
+    if (placedParts.length === 0) drawWatermark(ctx, canvas);
   }
 
-  function getExportCanvas() {
-    // Re-render with watermark baked in
-    redrawCanvas();
-    return document.getElementById('create-canvas');
-  }
-
-  function shareCreation() {
-    const canvas = getExportCanvas();
-    canvas.toBlob(async (blob) => {
-      if (!blob) { showToast('Could not create image'); return; }
-      const name = document.getElementById('create-name').value.trim() || 'My Dino';
-      const trainer = document.getElementById('trainer-name')?.value.trim() || '';
-      const text = trainer
-        ? `Check out "${name}" - my custom dinosaur made by ${trainer} in Dino World!`
-        : `Check out "${name}" - my custom dinosaur from Dino World!`;
-
-      if (navigator.share && navigator.canShare) {
-        const file = new File([blob], 'my-dino.png', { type: 'image/png' });
-        const shareData = { text, files: [file] };
-        if (navigator.canShare(shareData)) {
-          try { await navigator.share(shareData); return; } catch (_) {}
-        }
-      }
-      // Fallback: copy text
-      try {
-        await navigator.clipboard.writeText(text);
-        showToast('Caption copied! Save the image with Download button.');
-      } catch (_) {
-        showToast('Use Download button to save your dino');
-      }
-    }, 'image/png');
+  function drawWatermark(ctx, canvas) {
+    if (placedParts.length === 0) return;
+    const name = document.getElementById('create-name').value.trim() || 'Unnamed';
+    const trainer = document.getElementById('trainer-name')?.value.trim() || '';
+    ctx.save();
+    ctx.font = '600 13px -apple-system, sans-serif';
+    ctx.fillStyle = 'rgba(0,0,0,0.2)';
+    ctx.textAlign = 'right';
+    const credit = trainer ? `${name} - made by ${trainer} in Dino World` : `${name} - Dino World`;
+    ctx.fillText(credit, canvas.width - 10, canvas.height - 10);
+    ctx.restore();
   }
 
   function downloadCreation() {
-    const canvas = getExportCanvas();
+    // Re-render synchronously using pre-cached approach
+    const canvas = document.getElementById('create-canvas');
     const name = document.getElementById('create-name').value.trim() || 'my-dino';
     const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    const link = document.createElement('a');
-    link.download = `${slug}.png`;
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-    showToast('Dino saved!');
+    // Small delay to ensure SVGs are rendered
+    setTimeout(() => {
+      const link = document.createElement('a');
+      link.download = `${slug}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      showToast('Dino saved!');
+    }, 300);
   }
 
-  // Name input triggers canvas redraw (for watermark)
-  document.getElementById('create-name')?.addEventListener('input', redrawCanvas);
+  function shareCreation() {
+    const canvas = document.getElementById('create-canvas');
+    setTimeout(() => {
+      canvas.toBlob(async (blob) => {
+        if (!blob) { showToast('Could not create image'); return; }
+        const name = document.getElementById('create-name').value.trim() || 'My Dino';
+        const trainer = document.getElementById('trainer-name')?.value.trim() || '';
+        const text = trainer
+          ? `Check out "${name}" - my custom dino made by ${trainer} in Dino World!`
+          : `Check out "${name}" - my custom dino from Dino World!`;
+        if (navigator.share && navigator.canShare) {
+          const file = new File([blob], 'my-dino.png', { type: 'image/png' });
+          if (navigator.canShare({ text, files: [file] })) {
+            try { await navigator.share({ text, files: [file] }); return; } catch (_) {}
+          }
+        }
+        try {
+          await navigator.clipboard.writeText(text);
+          showToast('Caption copied! Use Download to save image.');
+        } catch (_) {
+          showToast('Use Download to save your dino');
+        }
+      }, 'image/png');
+    }, 300);
+  }
 })();
