@@ -1,0 +1,1682 @@
+{
+  "alamosaurus": {
+    "stats": {
+      "hp": 188,
+      "attack": 69,
+      "defense": 65,
+      "speed": 25,
+      "stamina": 75
+    },
+    "moves": [
+      {
+        "name": "Titan Stomp",
+        "type": "attack",
+        "power": 40,
+        "description": "Crushes foes beneath massive feet"
+      },
+      {
+        "name": "Tail Sweep",
+        "type": "attack",
+        "power": 35,
+        "description": "Whip-like tail clears everything nearby"
+      }
+    ],
+    "coords": {
+      "lat": 36.5,
+      "lng": -108.5
+    },
+    "battleClass": "balanced"
+  },
+  "alioramus": {
+    "stats": {
+      "hp": 97,
+      "attack": 67,
+      "defense": 30,
+      "speed": 55,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Snout Slash",
+        "type": "attack",
+        "power": 30,
+        "description": "Crested snout rakes across opponent"
+      },
+      {
+        "name": "Ambush Rush",
+        "type": "attack",
+        "power": 35,
+        "description": "Quick burst from cover surprises prey"
+      }
+    ],
+    "coords": {
+      "lat": 44,
+      "lng": 100
+    },
+    "battleClass": "balanced"
+  },
+  "allosaurus": {
+    "stats": {
+      "hp": 129,
+      "attack": 91,
+      "defense": 40,
+      "speed": 40,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Serrated Bleed",
+        "type": "attack",
+        "power": 35,
+        "description": "Serrated teeth inflict bleeding wounds"
+      },
+      {
+        "name": "Claw Pin",
+        "type": "attack",
+        "power": 30,
+        "description": "Three-fingered grip pins prey down"
+      }
+    ],
+    "coords": {
+      "lat": 39,
+      "lng": -110
+    },
+    "battleClass": "bruiser"
+  },
+  "alpkarakush": {
+    "stats": {
+      "hp": 127,
+      "attack": 86,
+      "defense": 40,
+      "speed": 75,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Sky Assault",
+        "type": "attack",
+        "power": 35,
+        "description": "Diving attack from great height"
+      },
+      {
+        "name": "Wing Gust",
+        "type": "defense",
+        "power": 20,
+        "description": "Massive wingspan creates disorienting wind"
+      }
+    ],
+    "coords": {
+      "lat": 41,
+      "lng": 73
+    },
+    "battleClass": "striker"
+  },
+  "ankylosaurus": {
+    "stats": {
+      "hp": 144,
+      "attack": 39,
+      "defense": 85,
+      "speed": 40,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Tail Club Smash",
+        "type": "attack",
+        "power": 45,
+        "description": "Bone club shatters legs and jaws"
+      },
+      {
+        "name": "Armored Shell",
+        "type": "defense",
+        "power": 0,
+        "description": "Osteoderms absorb incoming damage"
+      }
+    ],
+    "coords": {
+      "lat": 47,
+      "lng": -106
+    },
+    "battleClass": "tank"
+  },
+  "austroraptor": {
+    "stats": {
+      "hp": 90,
+      "attack": 65,
+      "defense": 30,
+      "speed": 70,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Sickle Slash",
+        "type": "attack",
+        "power": 30,
+        "description": "Hyperextended sickle claw strikes"
+      },
+      {
+        "name": "Fish Snatch",
+        "type": "attack",
+        "power": 25,
+        "description": "Conical teeth snag slippery prey"
+      }
+    ],
+    "coords": {
+      "lat": -40,
+      "lng": -68
+    },
+    "battleClass": "speedster"
+  },
+  "brachiosaurus": {
+    "stats": {
+      "hp": 186,
+      "attack": 57,
+      "defense": 65,
+      "speed": 25,
+      "stamina": 75
+    },
+    "moves": [
+      {
+        "name": "Massive Stomp",
+        "type": "attack",
+        "power": 45,
+        "description": "Enormous weight crushes anything below"
+      },
+      {
+        "name": "Neck Whip",
+        "type": "attack",
+        "power": 30,
+        "description": "Long neck swings like a battering ram"
+      }
+    ],
+    "coords": {
+      "lat": 39.5,
+      "lng": -109
+    },
+    "battleClass": "balanced"
+  },
+  "caletordraco": {
+    "stats": {
+      "hp": 108,
+      "attack": 68,
+      "defense": 40,
+      "speed": 55,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Dragon Bite",
+        "type": "attack",
+        "power": 30,
+        "description": "Powerful jaws snap with surprising force"
+      },
+      {
+        "name": "Sprint Attack",
+        "type": "attack",
+        "power": 25,
+        "description": "Quick charge closes distance fast"
+      }
+    ],
+    "coords": {
+      "lat": 49.5,
+      "lng": 0.5
+    },
+    "battleClass": "balanced"
+  },
+  "camarasaurus": {
+    "stats": {
+      "hp": 183,
+      "attack": 53,
+      "defense": 65,
+      "speed": 25,
+      "stamina": 75
+    },
+    "moves": [
+      {
+        "name": "Rearing Crush",
+        "type": "attack",
+        "power": 35,
+        "description": "Rears up and slams down with full weight"
+      },
+      {
+        "name": "Herd Momentum",
+        "type": "defense",
+        "power": 0,
+        "description": "Draws strength from nearby allies"
+      }
+    ],
+    "coords": {
+      "lat": 39,
+      "lng": -109.5
+    },
+    "battleClass": "balanced"
+  },
+  "ceratosaurus": {
+    "stats": {
+      "hp": 103,
+      "attack": 71,
+      "defense": 40,
+      "speed": 55,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Deep Slash",
+        "type": "attack",
+        "power": 35,
+        "description": "Longest proportional teeth inflict deep cuts"
+      },
+      {
+        "name": "Horn Strike",
+        "type": "attack",
+        "power": 25,
+        "description": "Nasal horn gores the opponent"
+      }
+    ],
+    "coords": {
+      "lat": 38.5,
+      "lng": -110
+    },
+    "battleClass": "balanced"
+  },
+  "chasmosaurus": {
+    "stats": {
+      "hp": 130,
+      "attack": 37,
+      "defense": 55,
+      "speed": 40,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Frill Charge",
+        "type": "attack",
+        "power": 30,
+        "description": "Massive frill acts as battering shield"
+      },
+      {
+        "name": "Horn Gore",
+        "type": "attack",
+        "power": 30,
+        "description": "Three horns thrust forward with force"
+      }
+    ],
+    "coords": {
+      "lat": 51,
+      "lng": -111
+    },
+    "battleClass": "balanced"
+  },
+  "coelophysis": {
+    "stats": {
+      "hp": 63,
+      "attack": 59,
+      "defense": 30,
+      "speed": 100,
+      "stamina": 60
+    },
+    "moves": [
+      {
+        "name": "Pack Swarm",
+        "type": "attack",
+        "power": 25,
+        "description": "Overwhelming numbers harry the foe"
+      },
+      {
+        "name": "Quick Snap",
+        "type": "attack",
+        "power": 20,
+        "description": "Lightning fast jaw snaps at soft tissue"
+      }
+    ],
+    "coords": {
+      "lat": 36,
+      "lng": -107
+    },
+    "battleClass": "speedster"
+  },
+  "compsognathus": {
+    "stats": {
+      "hp": 61,
+      "attack": 54,
+      "defense": 30,
+      "speed": 100,
+      "stamina": 60
+    },
+    "moves": [
+      {
+        "name": "Quick Strike",
+        "type": "attack",
+        "power": 20,
+        "description": "Tiny but rapid bites with high crit chance"
+      },
+      {
+        "name": "Evasion",
+        "type": "defense",
+        "power": 0,
+        "description": "Tiny size makes it nearly impossible to hit"
+      }
+    ],
+    "coords": {
+      "lat": 48.8,
+      "lng": 11
+    },
+    "battleClass": "speedster"
+  },
+  "corythosaurus": {
+    "stats": {
+      "hp": 136,
+      "attack": 42,
+      "defense": 65,
+      "speed": 40,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Crest Call",
+        "type": "defense",
+        "power": 0,
+        "description": "Resonating crest disorients the attacker"
+      },
+      {
+        "name": "Tail Lash",
+        "type": "attack",
+        "power": 25,
+        "description": "Heavy tail whips sideways"
+      }
+    ],
+    "coords": {
+      "lat": 51.5,
+      "lng": -111.5
+    },
+    "battleClass": "balanced"
+  },
+  "cryolophosaurus": {
+    "stats": {
+      "hp": 92,
+      "attack": 68,
+      "defense": 30,
+      "speed": 70,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Frost Bite",
+        "type": "attack",
+        "power": 30,
+        "description": "Antarctic predator strikes with cold precision"
+      },
+      {
+        "name": "Crest Display",
+        "type": "defense",
+        "power": 0,
+        "description": "Fan-shaped crest intimidates opponents"
+      }
+    ],
+    "coords": {
+      "lat": -84,
+      "lng": 165
+    },
+    "battleClass": "speedster"
+  },
+  "dakosaurus": {
+    "stats": {
+      "hp": 87,
+      "attack": 62,
+      "defense": 30,
+      "speed": 57,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Orca Bite",
+        "type": "attack",
+        "power": 35,
+        "description": "Blade-like teeth slice through flesh"
+      },
+      {
+        "name": "Aquatic Pursuit",
+        "type": "attack",
+        "power": 30,
+        "description": "Shark-like tail enables deadly pursuit"
+      }
+    ],
+    "coords": {
+      "lat": 48.5,
+      "lng": 11
+    },
+    "battleClass": "ambusher"
+  },
+  "daspletosaurus": {
+    "stats": {
+      "hp": 135,
+      "attack": 91,
+      "defense": 50,
+      "speed": 40,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Bone Crusher",
+        "type": "attack",
+        "power": 40,
+        "description": "Immensely powerful bite crushes bone"
+      },
+      {
+        "name": "Pack Hunt",
+        "type": "attack",
+        "power": 35,
+        "description": "Coordinated family group overwhelms prey"
+      }
+    ],
+    "coords": {
+      "lat": 51,
+      "lng": -112
+    },
+    "battleClass": "bruiser"
+  },
+  "deinonychus": {
+    "stats": {
+      "hp": 72,
+      "attack": 60,
+      "defense": 30,
+      "speed": 85,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Killing Claw",
+        "type": "attack",
+        "power": 35,
+        "description": "Retractable sickle claw pins and grapples"
+      },
+      {
+        "name": "Prey Exhaust",
+        "type": "attack",
+        "power": 25,
+        "description": "Relentless pursuit wears down stamina"
+      }
+    ],
+    "coords": {
+      "lat": 45,
+      "lng": -108
+    },
+    "battleClass": "speedster"
+  },
+  "dicraeosaurus": {
+    "stats": {
+      "hp": 145,
+      "attack": 51,
+      "defense": 65,
+      "speed": 25,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Spine Lash",
+        "type": "attack",
+        "power": 25,
+        "description": "Forked neural spines rake the attacker"
+      },
+      {
+        "name": "Stomp",
+        "type": "attack",
+        "power": 30,
+        "description": "Heavy weight drives downward"
+      }
+    ],
+    "coords": {
+      "lat": -10,
+      "lng": 35
+    },
+    "battleClass": "balanced"
+  },
+  "dimetrodon": {
+    "stats": {
+      "hp": 87,
+      "attack": 59,
+      "defense": 30,
+      "speed": 70,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Canine Bite",
+        "type": "attack",
+        "power": 30,
+        "description": "Three tooth types deliver varied wounds"
+      },
+      {
+        "name": "Sail Intimidate",
+        "type": "defense",
+        "power": 0,
+        "description": "Sail display makes predator back off"
+      }
+    ],
+    "coords": {
+      "lat": 33,
+      "lng": -97
+    },
+    "battleClass": "speedster"
+  },
+  "dimorphodon": {
+    "stats": {
+      "hp": 60,
+      "attack": 53,
+      "defense": 30,
+      "speed": 100,
+      "stamina": 60
+    },
+    "moves": [
+      {
+        "name": "Fang Snap",
+        "type": "attack",
+        "power": 20,
+        "description": "Large fang-like front teeth deliver quick bites"
+      },
+      {
+        "name": "Air Burst",
+        "type": "defense",
+        "power": 0,
+        "description": "Short burst flight evades ground attacks"
+      }
+    ],
+    "coords": {
+      "lat": 50.7,
+      "lng": -2.9
+    },
+    "battleClass": "scout"
+  },
+  "einiosaurus": {
+    "stats": {
+      "hp": 127,
+      "attack": 37,
+      "defense": 55,
+      "speed": 40,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Curved Horn",
+        "type": "attack",
+        "power": 25,
+        "description": "Forward-curving nasal horn hooks and trips"
+      },
+      {
+        "name": "Herd Shield",
+        "type": "defense",
+        "power": 0,
+        "description": "Large herd provides collective protection"
+      }
+    ],
+    "coords": {
+      "lat": 48,
+      "lng": -113
+    },
+    "battleClass": "balanced"
+  },
+  "ekrixinatosaurus": {
+    "stats": {
+      "hp": 107,
+      "attack": 70,
+      "defense": 40,
+      "speed": 55,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Explosive Bite",
+        "type": "attack",
+        "power": 35,
+        "description": "Name means \"explosion-born lizard\" — bites with fury"
+      },
+      {
+        "name": "Power Charge",
+        "type": "attack",
+        "power": 30,
+        "description": "Thick-bodied charge knocks opponent back"
+      }
+    ],
+    "coords": {
+      "lat": -38,
+      "lng": -68
+    },
+    "battleClass": "balanced"
+  },
+  "eonatator": {
+    "stats": {
+      "hp": 70,
+      "attack": 58,
+      "defense": 30,
+      "speed": 65,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Ambush Lunge",
+        "type": "attack",
+        "power": 25,
+        "description": "Small mosasaur strikes from concealment"
+      },
+      {
+        "name": "Coil Escape",
+        "type": "defense",
+        "power": 0,
+        "description": "Serpentine body twists away from danger"
+      }
+    ],
+    "coords": {
+      "lat": 33,
+      "lng": -87
+    },
+    "battleClass": "ambusher"
+  },
+  "eoraptor": {
+    "stats": {
+      "hp": 62,
+      "attack": 43,
+      "defense": 30,
+      "speed": 85,
+      "stamina": 70
+    },
+    "moves": [
+      {
+        "name": "Dawn Strike",
+        "type": "attack",
+        "power": 20,
+        "description": "One of the earliest dinosaurs, quick and agile"
+      },
+      {
+        "name": "Adapt",
+        "type": "defense",
+        "power": 0,
+        "description": "Omnivore adaptability provides survival edge"
+      }
+    ],
+    "coords": {
+      "lat": -30,
+      "lng": -68
+    },
+    "battleClass": "speedster"
+  },
+  "gigantspinosaurus": {
+    "stats": {
+      "hp": 105,
+      "attack": 36,
+      "defense": 75,
+      "speed": 55,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Shoulder Spike",
+        "type": "attack",
+        "power": 35,
+        "description": "Enormous shoulder spines impale attackers"
+      },
+      {
+        "name": "Spine Guard",
+        "type": "defense",
+        "power": 0,
+        "description": "Defensive spikes deter approach"
+      }
+    ],
+    "coords": {
+      "lat": 29,
+      "lng": 104
+    },
+    "battleClass": "tank"
+  },
+  "glacialisaurus": {
+    "stats": {
+      "hp": 138,
+      "attack": 39,
+      "defense": 65,
+      "speed": 40,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Frozen Stomp",
+        "type": "attack",
+        "power": 25,
+        "description": "Antarctic herbivore strikes with heavy feet"
+      },
+      {
+        "name": "Endurance",
+        "type": "defense",
+        "power": 0,
+        "description": "Extreme cold survival toughens the body"
+      }
+    ],
+    "coords": {
+      "lat": -84,
+      "lng": 165
+    },
+    "battleClass": "balanced"
+  },
+  "guanlong": {
+    "stats": {
+      "hp": 84,
+      "attack": 59,
+      "defense": 30,
+      "speed": 85,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Crest Slash",
+        "type": "attack",
+        "power": 25,
+        "description": "Head crest aids slicing attacks"
+      },
+      {
+        "name": "Proto-tyrant",
+        "type": "attack",
+        "power": 30,
+        "description": "Ancestor of T-rex fights with raw fury"
+      }
+    ],
+    "coords": {
+      "lat": 44,
+      "lng": 88
+    },
+    "battleClass": "speedster"
+  },
+  "hatzegopteryx": {
+    "stats": {
+      "hp": 90,
+      "attack": 80,
+      "defense": 30,
+      "speed": 76,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Stork Strike",
+        "type": "attack",
+        "power": 40,
+        "description": "Aircraft-sized pterosaur strikes like a giant stork"
+      },
+      {
+        "name": "Wide Gape Crush",
+        "type": "attack",
+        "power": 35,
+        "description": "Enormous jaw swallows prey too large for others"
+      }
+    ],
+    "coords": {
+      "lat": 45.5,
+      "lng": 23
+    },
+    "battleClass": "striker"
+  },
+  "herrerasaurus": {
+    "stats": {
+      "hp": 92,
+      "attack": 68,
+      "defense": 30,
+      "speed": 70,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Primal Bite",
+        "type": "attack",
+        "power": 30,
+        "description": "One of the earliest predators bites with force"
+      },
+      {
+        "name": "Sprint Ambush",
+        "type": "attack",
+        "power": 25,
+        "description": "Bipedal speed enables surprise attacks"
+      }
+    ],
+    "coords": {
+      "lat": -30.5,
+      "lng": -68
+    },
+    "battleClass": "speedster"
+  },
+  "iguanodon": {
+    "stats": {
+      "hp": 143,
+      "attack": 44,
+      "defense": 65,
+      "speed": 40,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Thumb Spike",
+        "type": "attack",
+        "power": 30,
+        "description": "Iconic thumb spike stabs attackers"
+      },
+      {
+        "name": "Herd Stampede",
+        "type": "attack",
+        "power": 25,
+        "description": "Group movement tramples threats"
+      }
+    ],
+    "coords": {
+      "lat": 50.5,
+      "lng": 4.3
+    },
+    "battleClass": "balanced"
+  },
+  "inawentu": {
+    "stats": {
+      "hp": 150,
+      "attack": 53,
+      "defense": 65,
+      "speed": 25,
+      "stamina": 75
+    },
+    "moves": [
+      {
+        "name": "Tail Slam",
+        "type": "attack",
+        "power": 30,
+        "description": "Long tail delivers devastating sideways blow"
+      },
+      {
+        "name": "Size Shield",
+        "type": "defense",
+        "power": 0,
+        "description": "Sheer bulk deters most predators"
+      }
+    ],
+    "coords": {
+      "lat": -39,
+      "lng": -69
+    },
+    "battleClass": "balanced"
+  },
+  "ischigualastia": {
+    "stats": {
+      "hp": 130,
+      "attack": 35,
+      "defense": 55,
+      "speed": 40,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Tusked Ram",
+        "type": "attack",
+        "power": 25,
+        "description": "Dicynodont tusks and bulk ram opponents"
+      },
+      {
+        "name": "Dig In",
+        "type": "defense",
+        "power": 0,
+        "description": "Low stance and heavy body resist knockback"
+      }
+    ],
+    "coords": {
+      "lat": -30.2,
+      "lng": -68
+    },
+    "battleClass": "balanced"
+  },
+  "kronosaurus": {
+    "stats": {
+      "hp": 182,
+      "attack": 92,
+      "defense": 50,
+      "speed": 55,
+      "stamina": 60
+    },
+    "moves": [
+      {
+        "name": "Fang Strike",
+        "type": "attack",
+        "power": 45,
+        "description": "Tusk-like front teeth deliver devastating bites"
+      },
+      {
+        "name": "Predatory Surge",
+        "type": "attack",
+        "power": 35,
+        "description": "Powerful swimming generates crushing momentum"
+      }
+    ],
+    "coords": {
+      "lat": -22,
+      "lng": 142
+    },
+    "battleClass": "heavy predator"
+  },
+  "marshosaurus": {
+    "stats": {
+      "hp": 87,
+      "attack": 64,
+      "defense": 30,
+      "speed": 70,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Slash and Dash",
+        "type": "attack",
+        "power": 25,
+        "description": "Quick slashing bite then retreats"
+      },
+      {
+        "name": "Agile Strike",
+        "type": "attack",
+        "power": 20,
+        "description": "Light build enables rapid repositioning"
+      }
+    ],
+    "coords": {
+      "lat": 39,
+      "lng": -109
+    },
+    "battleClass": "speedster"
+  },
+  "mastodonsaurus": {
+    "stats": {
+      "hp": 130,
+      "attack": 77,
+      "defense": 40,
+      "speed": 40,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Jaw Trap",
+        "type": "attack",
+        "power": 30,
+        "description": "Massive flat head conceals powerful jaws"
+      },
+      {
+        "name": "Lurk",
+        "type": "defense",
+        "power": 0,
+        "description": "Ambush predator waits motionless"
+      }
+    ],
+    "coords": {
+      "lat": 49,
+      "lng": 9
+    },
+    "battleClass": "balanced"
+  },
+  "medusaceratops": {
+    "stats": {
+      "hp": 138,
+      "attack": 39,
+      "defense": 65,
+      "speed": 40,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Medusa Frill",
+        "type": "attack",
+        "power": 30,
+        "description": "Snake-like frill horns slash in all directions"
+      },
+      {
+        "name": "Horn Charge",
+        "type": "attack",
+        "power": 25,
+        "description": "Ceratopsian charge at full gallop"
+      }
+    ],
+    "coords": {
+      "lat": 48,
+      "lng": -110
+    },
+    "battleClass": "balanced"
+  },
+  "pachycephalosaurus": {
+    "stats": {
+      "hp": 92,
+      "attack": 49,
+      "defense": 30,
+      "speed": 55,
+      "stamina": 60
+    },
+    "moves": [
+      {
+        "name": "Cranial Bash",
+        "type": "attack",
+        "power": 40,
+        "description": "25cm thick skull dome delivers concussive impact"
+      },
+      {
+        "name": "Dome Shield",
+        "type": "defense",
+        "power": 0,
+        "description": "Bony knobs and spikes absorb blows"
+      }
+    ],
+    "coords": {
+      "lat": 46.5,
+      "lng": -105
+    },
+    "battleClass": "balanced"
+  },
+  "panphagia": {
+    "stats": {
+      "hp": 62,
+      "attack": 43,
+      "defense": 30,
+      "speed": 85,
+      "stamina": 70
+    },
+    "moves": [
+      {
+        "name": "Versatile Bite",
+        "type": "attack",
+        "power": 20,
+        "description": "Mixed dentition handles any food — or foe"
+      },
+      {
+        "name": "Survivor",
+        "type": "defense",
+        "power": 0,
+        "description": "Ultimate omnivore outlasts through adaptability"
+      }
+    ],
+    "coords": {
+      "lat": -30,
+      "lng": -68
+    },
+    "battleClass": "speedster"
+  },
+  "pinacosaurus": {
+    "stats": {
+      "hp": 130,
+      "attack": 38,
+      "defense": 75,
+      "speed": 40,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Club Swing",
+        "type": "attack",
+        "power": 30,
+        "description": "Tail club connects with jarring force"
+      },
+      {
+        "name": "Low Profile",
+        "type": "defense",
+        "power": 0,
+        "description": "Armored body hugs the ground"
+      }
+    ],
+    "coords": {
+      "lat": 44,
+      "lng": 100
+    },
+    "battleClass": "tank"
+  },
+  "plateosaurus": {
+    "stats": {
+      "hp": 131,
+      "attack": 37,
+      "defense": 65,
+      "speed": 40,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Rearing Strike",
+        "type": "attack",
+        "power": 25,
+        "description": "Bipedal stance enables downward strikes"
+      },
+      {
+        "name": "Thumb Claw",
+        "type": "attack",
+        "power": 25,
+        "description": "Large thumb claw rakes opponents"
+      }
+    ],
+    "coords": {
+      "lat": 48,
+      "lng": 9
+    },
+    "battleClass": "balanced"
+  },
+  "promastodontosaurus": {
+    "stats": {
+      "hp": 72,
+      "attack": 56,
+      "defense": 30,
+      "speed": 85,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Snap Ambush",
+        "type": "attack",
+        "power": 25,
+        "description": "Giant amphibian jaws snap shut rapidly"
+      },
+      {
+        "name": "Submerge",
+        "type": "defense",
+        "power": 0,
+        "description": "Sinks below water to avoid attacks"
+      }
+    ],
+    "coords": {
+      "lat": -30,
+      "lng": -68
+    },
+    "battleClass": "speedster"
+  },
+  "pterodactylus": {
+    "stats": {
+      "hp": 60,
+      "attack": 52,
+      "defense": 30,
+      "speed": 100,
+      "stamina": 60
+    },
+    "moves": [
+      {
+        "name": "Aerial Dive",
+        "type": "attack",
+        "power": 20,
+        "description": "Swoops down from above with precision"
+      },
+      {
+        "name": "Quick Escape",
+        "type": "defense",
+        "power": 0,
+        "description": "Takes to the air to evade ground threats"
+      }
+    ],
+    "coords": {
+      "lat": 48.8,
+      "lng": 11
+    },
+    "battleClass": "scout"
+  },
+  "qianzhousaurus": {
+    "stats": {
+      "hp": 105,
+      "attack": 73,
+      "defense": 40,
+      "speed": 55,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Long Snout Bite",
+        "type": "attack",
+        "power": 30,
+        "description": "Elongated snout reaches farther than expected"
+      },
+      {
+        "name": "Pinocchio Rush",
+        "type": "attack",
+        "power": 25,
+        "description": "Nicknamed \"Pinocchio Rex\" — charges with snout"
+      }
+    ],
+    "coords": {
+      "lat": 25,
+      "lng": 114
+    },
+    "battleClass": "balanced"
+  },
+  "rajasaurus": {
+    "stats": {
+      "hp": 103,
+      "attack": 70,
+      "defense": 40,
+      "speed": 55,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Royal Bite",
+        "type": "attack",
+        "power": 35,
+        "description": "The \"King Lizard\" bites with authority"
+      },
+      {
+        "name": "Horn Butt",
+        "type": "attack",
+        "power": 25,
+        "description": "Single nasal horn delivers blunt impact"
+      }
+    ],
+    "coords": {
+      "lat": 22,
+      "lng": 74
+    },
+    "battleClass": "balanced"
+  },
+  "rhamphorhynchus": {
+    "stats": {
+      "hp": 60,
+      "attack": 54,
+      "defense": 30,
+      "speed": 100,
+      "stamina": 60
+    },
+    "moves": [
+      {
+        "name": "Swoop Snatch",
+        "type": "attack",
+        "power": 20,
+        "description": "Needle-like teeth snag prey mid-flight"
+      },
+      {
+        "name": "Tail Rudder",
+        "type": "defense",
+        "power": 0,
+        "description": "Diamond-shaped tail vane enables sharp dodges"
+      }
+    ],
+    "coords": {
+      "lat": 48.8,
+      "lng": 11
+    },
+    "battleClass": "scout"
+  },
+  "rhomaleosaurus": {
+    "stats": {
+      "hp": 131,
+      "attack": 86,
+      "defense": 50,
+      "speed": 55,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Grip Bite",
+        "type": "attack",
+        "power": 30,
+        "description": "Conical teeth grip prey in unbreakable hold"
+      },
+      {
+        "name": "Scent Track",
+        "type": "defense",
+        "power": 0,
+        "description": "Underwater smell sense detects prey like a shark"
+      }
+    ],
+    "coords": {
+      "lat": 54,
+      "lng": -1
+    },
+    "battleClass": "heavy predator"
+  },
+  "riparovenator": {
+    "stats": {
+      "hp": 140,
+      "attack": 91,
+      "defense": 50,
+      "speed": 40,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Riverside Ambush",
+        "type": "attack",
+        "power": 30,
+        "description": "Spinosaurid hunts along waterways"
+      },
+      {
+        "name": "Crocodile Snap",
+        "type": "attack",
+        "power": 30,
+        "description": "Crocodile-like snout delivers rapid bites"
+      }
+    ],
+    "coords": {
+      "lat": 50.7,
+      "lng": -1.2
+    },
+    "battleClass": "bruiser"
+  },
+  "sarcosuchus": {
+    "stats": {
+      "hp": 137,
+      "attack": 92,
+      "defense": 50,
+      "speed": 40,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Death Roll",
+        "type": "attack",
+        "power": 40,
+        "description": "Giant crocodilian spins to dismember prey"
+      },
+      {
+        "name": "Armored Hide",
+        "type": "defense",
+        "power": 0,
+        "description": "Thick scutes protect from counterattacks"
+      }
+    ],
+    "coords": {
+      "lat": 17,
+      "lng": 8
+    },
+    "battleClass": "bruiser"
+  },
+  "sauropelta": {
+    "stats": {
+      "hp": 128,
+      "attack": 38,
+      "defense": 75,
+      "speed": 40,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Spike Shoulder",
+        "type": "attack",
+        "power": 25,
+        "description": "Large shoulder spines deter predators"
+      },
+      {
+        "name": "Shield Plates",
+        "type": "defense",
+        "power": 0,
+        "description": "Rows of bony plates absorb damage"
+      }
+    ],
+    "coords": {
+      "lat": 45,
+      "lng": -108
+    },
+    "battleClass": "tank"
+  },
+  "saurosuchus": {
+    "stats": {
+      "hp": 125,
+      "attack": 71,
+      "defense": 40,
+      "speed": 40,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Apex Lunge",
+        "type": "attack",
+        "power": 35,
+        "description": "Top Triassic predator lunges at full speed"
+      },
+      {
+        "name": "Scaly Armor",
+        "type": "defense",
+        "power": 0,
+        "description": "Osteoderms along back provide protection"
+      }
+    ],
+    "coords": {
+      "lat": -30,
+      "lng": -68
+    },
+    "battleClass": "balanced"
+  },
+  "scelidosaurus": {
+    "stats": {
+      "hp": 89,
+      "attack": 36,
+      "defense": 65,
+      "speed": 55,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Scute Bash",
+        "type": "attack",
+        "power": 20,
+        "description": "Armored body slams into opponent"
+      },
+      {
+        "name": "Bony Armor",
+        "type": "defense",
+        "power": 0,
+        "description": "Rows of scutes absorb all but the strongest hits"
+      }
+    ],
+    "coords": {
+      "lat": 50.7,
+      "lng": -2.9
+    },
+    "battleClass": "balanced"
+  },
+  "shonisaurus": {
+    "stats": {
+      "hp": 184,
+      "attack": 75,
+      "defense": 50,
+      "speed": 55,
+      "stamina": 60
+    },
+    "moves": [
+      {
+        "name": "Giant Ram",
+        "type": "attack",
+        "power": 40,
+        "description": "Whale-sized ichthyosaur charges with massive bulk"
+      },
+      {
+        "name": "Deep Dive",
+        "type": "defense",
+        "power": 0,
+        "description": "Dives to unreachable depths to escape"
+      }
+    ],
+    "coords": {
+      "lat": 39,
+      "lng": -118
+    },
+    "battleClass": "heavy predator"
+  },
+  "silesaurus": {
+    "stats": {
+      "hp": 83,
+      "attack": 44,
+      "defense": 30,
+      "speed": 70,
+      "stamina": 60
+    },
+    "moves": [
+      {
+        "name": "Beak Peck",
+        "type": "attack",
+        "power": 15,
+        "description": "Beak-like jaw tip pecks rapidly"
+      },
+      {
+        "name": "Nimble Dodge",
+        "type": "defense",
+        "power": 0,
+        "description": "Lightweight frame darts out of harm"
+      }
+    ],
+    "coords": {
+      "lat": 50.7,
+      "lng": 18
+    },
+    "battleClass": "speedster"
+  },
+  "smilosuchus": {
+    "stats": {
+      "hp": 140,
+      "attack": 86,
+      "defense": 50,
+      "speed": 40,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Phytosaur Snap",
+        "type": "attack",
+        "power": 30,
+        "description": "Crocodile-like jaws snap with ambush speed"
+      },
+      {
+        "name": "River Lurk",
+        "type": "defense",
+        "power": 0,
+        "description": "Semi-aquatic camouflage conceals position"
+      }
+    ],
+    "coords": {
+      "lat": 36,
+      "lng": -110
+    },
+    "battleClass": "bruiser"
+  },
+  "stegoceras": {
+    "stats": {
+      "hp": 68,
+      "attack": 34,
+      "defense": 45,
+      "speed": 85,
+      "stamina": 75
+    },
+    "moves": [
+      {
+        "name": "Head Ram",
+        "type": "attack",
+        "power": 25,
+        "description": "Dome-headed charge stuns opponents"
+      },
+      {
+        "name": "Thick Skull",
+        "type": "defense",
+        "power": 0,
+        "description": "Dense skull absorbs counterattacks"
+      }
+    ],
+    "coords": {
+      "lat": 51,
+      "lng": -111
+    },
+    "battleClass": "speedster"
+  },
+  "stegosaurus": {
+    "stats": {
+      "hp": 138,
+      "attack": 40,
+      "defense": 85,
+      "speed": 40,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Thagomizer",
+        "type": "attack",
+        "power": 40,
+        "description": "Four tail spikes deliver devastating blows"
+      },
+      {
+        "name": "Plate Display",
+        "type": "defense",
+        "power": 0,
+        "description": "Dorsal plates make body appear much larger"
+      }
+    ],
+    "coords": {
+      "lat": 39,
+      "lng": -110
+    },
+    "battleClass": "tank"
+  },
+  "styxosaurus": {
+    "stats": {
+      "hp": 132,
+      "attack": 97,
+      "defense": 50,
+      "speed": 55,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Neck Lash",
+        "type": "attack",
+        "power": 30,
+        "description": "Extremely long neck whips sideways"
+      },
+      {
+        "name": "Styx Dive",
+        "type": "defense",
+        "power": 0,
+        "description": "Named for the River Styx — vanishes into the deep"
+      }
+    ],
+    "coords": {
+      "lat": 39,
+      "lng": -100
+    },
+    "battleClass": "heavy predator"
+  },
+  "unaysaurus": {
+    "stats": {
+      "hp": 74,
+      "attack": 34,
+      "defense": 45,
+      "speed": 70,
+      "stamina": 65
+    },
+    "moves": [
+      {
+        "name": "Tail Swipe",
+        "type": "attack",
+        "power": 20,
+        "description": "Balanced tail delivers quick swipes"
+      },
+      {
+        "name": "Forager Grit",
+        "type": "defense",
+        "power": 0,
+        "description": "Early sauropodomorph toughness perseveres"
+      }
+    ],
+    "coords": {
+      "lat": -29.5,
+      "lng": -53
+    },
+    "battleClass": "speedster"
+  },
+  "yutyrannus": {
+    "stats": {
+      "hp": 127,
+      "attack": 88,
+      "defense": 40,
+      "speed": 40,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Feathered Fury",
+        "type": "attack",
+        "power": 35,
+        "description": "Largest known feathered predator attacks in flurry"
+      },
+      {
+        "name": "Winter Hunter",
+        "type": "attack",
+        "power": 30,
+        "description": "Cold-adapted tyrannosaur hunts through snow"
+      }
+    ],
+    "coords": {
+      "lat": 42,
+      "lng": 121
+    },
+    "battleClass": "bruiser"
+  }
+}

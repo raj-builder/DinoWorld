@@ -1,0 +1,1535 @@
+{
+  "generatedAt": "2026-03-26T06:22:37.133Z",
+  "sourceApi": "https://r19ry25y.apicdn.sanity.io/v2021-10-21/data/query/production",
+  "totalSpecies": 60,
+  "species": [
+    {
+      "slug": "alamosaurus",
+      "displayName": "Alamosaurus sanjuanensis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/alamosaurus",
+      "localRawImage": "assets/dinos/raw/alamosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/alamosaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "70 million to 66 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Ojo Alamo Formation",
+      "dimensions": {
+        "length": "26-30 M",
+        "height": "12 M",
+        "weight": "38-80 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "alioramus",
+      "displayName": "Alioramus remotus",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/alioramus",
+      "localRawImage": "assets/dinos/raw/alioramus.png",
+      "localOptimizedImage": "assets/dinos/optimized/alioramus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "72 million to 66 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Asia, Nemegt Formation",
+      "dimensions": {
+        "length": "5.5-6 M",
+        "height": "Use the Compare tool M",
+        "weight": "500-750 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "allosaurus",
+      "displayName": "Allosaurus fragilis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/allosaurus",
+      "localRawImage": "assets/dinos/raw/allosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/allosaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "161.2 million to 145 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Morrison Formation",
+      "dimensions": {
+        "length": "8.5-9.7 M",
+        "height": "2.8 M",
+        "weight": "1.7-2.7 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "alpkarakush",
+      "displayName": "Alpkarakush kyrgyzicus",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/alpkarakush",
+      "localRawImage": "assets/dinos/raw/alpkarakush.png",
+      "localOptimizedImage": "assets/dinos/optimized/alpkarakush.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "165 million to 164 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "air",
+      "locationFormation": "Asia, Balabansai Formation",
+      "dimensions": {
+        "length": "7-8 M",
+        "height": "2.7 M",
+        "weight": "1.3 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "ankylosaurus",
+      "displayName": "Ankylosaurus magniventris",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/ankylosaurus",
+      "localRawImage": "assets/dinos/raw/ankylosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/ankylosaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "68 million to 66 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Hell Creek Formation",
+      "dimensions": {
+        "length": "6-8 M",
+        "height": "~2 M",
+        "weight": "4.8-8 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "austroraptor",
+      "displayName": "Austroraptor cabazai",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/austroraptor",
+      "localRawImage": "assets/dinos/raw/austroraptor.png",
+      "localOptimizedImage": "assets/dinos/optimized/austroraptor.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "72.4 million to 66 million years ago",
+      "foodTypeRaw": [
+        "Meat",
+        "Fish"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "South America, Allen Formation",
+      "dimensions": {
+        "length": "5-6 M",
+        "height": "1.78 M",
+        "weight": "300-520 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "brachiosaurus",
+      "displayName": "Brachiosaurus altithorax",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/brachiosaurus",
+      "localRawImage": "assets/dinos/raw/brachiosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/brachiosaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "154 million to 150 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Morrison Formation",
+      "dimensions": {
+        "length": "18-22 M",
+        "height": "9.4-13 M",
+        "weight": "28.3-58 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "caletordraco",
+      "displayName": "Caletodraco cottardi",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/caletordraco",
+      "localRawImage": "assets/dinos/raw/caletordraco.png",
+      "localOptimizedImage": "assets/dinos/optimized/caletordraco.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "100 million to 95 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Europe, Chalk of the Pays de Caux",
+      "dimensions": {
+        "length": "6 M",
+        "height": "2.06 M",
+        "weight": "850-900 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "camarasaurus",
+      "displayName": "Camarasaurus lentus",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/camarasaurus",
+      "localRawImage": "assets/dinos/raw/camarasaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/camarasaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "155 million to 145 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Morrison Formation",
+      "dimensions": {
+        "length": "15 M",
+        "height": "7 M",
+        "weight": "15 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "ceratosaurus",
+      "displayName": "Ceratosaurus nasicornis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/ceratosaurus",
+      "localRawImage": "assets/dinos/raw/ceratosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/ceratosaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "153 million to 148 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Morrison Formation",
+      "dimensions": {
+        "length": "7 M",
+        "height": "2 M",
+        "weight": "700 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "chasmosaurus",
+      "displayName": "Chasmosaurus russelli",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/chasmosaurus",
+      "localRawImage": "assets/dinos/raw/chasmosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/chasmosaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "77 million to 76 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Dinosaur Park Formation",
+      "dimensions": {
+        "length": "4.8 M",
+        "height": "2.36 M",
+        "weight": "2 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "coelophysis",
+      "displayName": "Coelophysis bauri",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/coelophysis",
+      "localRawImage": "assets/dinos/raw/coelophysis.png",
+      "localOptimizedImage": "assets/dinos/optimized/coelophysis.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "228 million to 201.3 million years ago",
+      "foodTypeRaw": [
+        "Meat",
+        "Fish",
+        "Insects"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Chinle Formation",
+      "dimensions": {
+        "length": "3 M",
+        "height": "0.84 M",
+        "weight": "15-25 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "compsognathus",
+      "displayName": "Compsognathus longipes",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/compsognathus",
+      "localRawImage": "assets/dinos/raw/compsognathus.png",
+      "localOptimizedImage": "assets/dinos/optimized/compsognathus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "150.8 million to 145 million years ago",
+      "foodTypeRaw": [
+        "Insects",
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Europe, Painten (Solnhofen Limestone)",
+      "dimensions": {
+        "length": "1.25-1.4 M",
+        "height": "0.49 M",
+        "weight": "3.5 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "corythosaurus",
+      "displayName": "Corythosaurus casuarius",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/corythosaurus",
+      "localRawImage": "assets/dinos/raw/corythosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/corythosaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "77 million to 75.7 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Dinosaur Park Fornation",
+      "dimensions": {
+        "length": "8.1-9 M",
+        "height": "3.2 M",
+        "weight": "3.1-3.82 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "cryolophosaurus",
+      "displayName": "Cryolophosaurus ellioti",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/cryolophosaurus",
+      "localRawImage": "assets/dinos/raw/cryolophosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/cryolophosaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "186 million to 182 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Antarctica, Hanson Formation",
+      "dimensions": {
+        "length": "6-7.7 M",
+        "height": "2.5 M",
+        "weight": "350-780 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "dakosaurus",
+      "displayName": "Dakosaurus maximus",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/dakosaurus",
+      "localRawImage": "assets/dinos/raw/dakosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/dakosaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "149.2 million to 145 million years ago",
+      "foodTypeRaw": [
+        "Meat",
+        "Fish"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "water",
+      "locationFormation": "Europe, Mörnsheim Formation",
+      "dimensions": {
+        "length": "4-5 M",
+        "height": "N/A M",
+        "weight": "200-275 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "daspletosaurus",
+      "displayName": "Daspletosaurus torosus",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/daspletosaurus",
+      "localRawImage": "assets/dinos/raw/daspletosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/daspletosaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "77 million to 74.4 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Dinosaur Park, Oldman, Judith River",
+      "dimensions": {
+        "length": "8.5-9 M",
+        "height": "3.2 M",
+        "weight": "3 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "deinonychus",
+      "displayName": "Deinonychus antirrhopus",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/deinonychus",
+      "localRawImage": "assets/dinos/raw/deinonychus.png",
+      "localOptimizedImage": "assets/dinos/optimized/deinonychus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "115 million to 108 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Clovery Formation, Antlers Formation",
+      "dimensions": {
+        "length": "3.3-3.4 M",
+        "height": "1.11 M",
+        "weight": "60-100 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "dicraeosaurus",
+      "displayName": "Dicraeosaurus hansemanni",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/dicraeosaurus",
+      "localRawImage": "assets/dinos/raw/dicraeosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/dicraeosaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "155 million to 150 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Africa, Tendaguru",
+      "dimensions": {
+        "length": "14-15 M",
+        "height": "3.68 M",
+        "weight": "5-6 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "dimetrodon",
+      "displayName": "Dimetrodon limbatus",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/dimetrodon",
+      "localRawImage": "assets/dinos/raw/dimetrodon.png",
+      "localOptimizedImage": "assets/dinos/optimized/dimetrodon.webp",
+      "periodGroup": "Permian",
+      "timeStagesText": "295 million to 270 million years ago",
+      "foodTypeRaw": [
+        "Fish",
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Red Beds of Texas and Oklahoma",
+      "dimensions": {
+        "length": "3 M",
+        "height": "2 M",
+        "weight": "200 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "dimorphodon",
+      "displayName": "Dimorphodon macronyx",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/dimorphodon",
+      "localRawImage": "assets/dinos/raw/dimorphodon.png",
+      "localOptimizedImage": "assets/dinos/optimized/dimorphodon.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "195 million to 190 million years ago",
+      "foodTypeRaw": [
+        "Meat",
+        "Insects",
+        "Fish"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "air",
+      "locationFormation": "Europe, World Heritage Site, Lyme Regis",
+      "dimensions": {
+        "length": "1 M",
+        "height": "0.37 M",
+        "weight": "1 kg",
+        "wingspan": "1.45 M"
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "einiosaurus",
+      "displayName": "Einiosaurus procurvicornis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/einiosaurus",
+      "localRawImage": "assets/dinos/raw/einiosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/einiosaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "74.5 million to 74 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Two Medicine Formation",
+      "dimensions": {
+        "length": "4.5 M",
+        "height": "2.27 M",
+        "weight": "1.3 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "ekrixinatosaurus",
+      "displayName": "Ekrixinatosaurus novasi",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/ekrixinatosaurus",
+      "localRawImage": "assets/dinos/raw/ekrixinatosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/ekrixinatosaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "98 million to 93 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "South America, Candeleros",
+      "dimensions": {
+        "length": "6.5-8 M",
+        "height": "3 M",
+        "weight": "800 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "eonatator",
+      "displayName": "Eonatator sternbergii",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/eonatator",
+      "localRawImage": "assets/dinos/raw/eonatator.png",
+      "localOptimizedImage": "assets/dinos/optimized/eonatator.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "84 million to 72.1 million years ago",
+      "foodTypeRaw": [
+        "Fish",
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "water",
+      "locationFormation": "North America, Eutaw, Mooreville Chalk",
+      "dimensions": {
+        "length": "2.6 M",
+        "height": "N/A M",
+        "weight": "50 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "eoraptor",
+      "displayName": "Eoraptor lunensis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/eoraptor",
+      "localRawImage": "assets/dinos/raw/eoraptor.png",
+      "localOptimizedImage": "assets/dinos/optimized/eoraptor.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "231 million to 228 million years ago",
+      "foodTypeRaw": [
+        "Plants",
+        "Meat",
+        "Insects"
+      ],
+      "mealTypeNormalized": "omnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "South America, Ischigualasto",
+      "dimensions": {
+        "length": "1.3 M",
+        "height": "0.48 M",
+        "weight": "9 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "gigantspinosaurus",
+      "displayName": "Gigantspinosaurus sichuanensis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/gigantspinosaurus",
+      "localRawImage": "assets/dinos/raw/gigantspinosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/gigantspinosaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "163.5 million to 157.3 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Asia, Shaximiao Formation",
+      "dimensions": {
+        "length": "4.2 M",
+        "height": "1.77 M",
+        "weight": "750 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "glacialisaurus",
+      "displayName": "Glacialisaurus hammeri",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/glacialisaurus",
+      "localRawImage": "assets/dinos/raw/glacialisaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/glacialisaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "186 million to 182 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Hanson Formation",
+      "dimensions": {
+        "length": "6-7.6 M",
+        "height": "2 M",
+        "weight": "3.6-5.4 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "guanlong",
+      "displayName": "Guanlong wucaii",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/guanlong",
+      "localRawImage": "assets/dinos/raw/guanlong.png",
+      "localOptimizedImage": "assets/dinos/optimized/guanlong.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "163.5 million to 157.3 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Asia, Shishugou",
+      "dimensions": {
+        "length": "3-3.5 M",
+        "height": "1.17 M",
+        "weight": "125 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "hatzegopteryx",
+      "displayName": "Hatzegopteryx thambema",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/hatzegopteryx",
+      "localRawImage": "assets/dinos/raw/hatzegopteryx.png",
+      "localOptimizedImage": "assets/dinos/optimized/hatzegopteryx.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "70.6 million to 66 million years ago",
+      "foodTypeRaw": [
+        "Fish",
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "air",
+      "locationFormation": "Europe, Densuş Ciula",
+      "dimensions": {
+        "length": "10 M",
+        "height": "4.6 M",
+        "weight": "300 kg",
+        "wingspan": "10-12 M"
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "herrerasaurus",
+      "displayName": "Herrerasaurus ischigualastensis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/herrerasaurus",
+      "localRawImage": "assets/dinos/raw/herrerasaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/herrerasaurus.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "231.4 million to 228.9 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "South America, Ischigualasto",
+      "dimensions": {
+        "length": "6 M",
+        "height": "2 M",
+        "weight": "350 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "iguanodon",
+      "displayName": "Iguanodon bernissartensis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/iguanodon",
+      "localRawImage": "assets/dinos/raw/iguanodon.png",
+      "localOptimizedImage": "assets/dinos/optimized/iguanodon.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "126 million to 122 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Europe, Sainte-Barbe Clays Formation",
+      "dimensions": {
+        "length": "9-11 M",
+        "height": "3 M",
+        "weight": "4.5 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "inawentu",
+      "displayName": "Inawentu oslatus",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/inawentu",
+      "localRawImage": "assets/dinos/raw/inawentu.png",
+      "localOptimizedImage": "assets/dinos/optimized/inawentu.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "86 million to 83 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "South America, Bajo de la Carpa Formation",
+      "dimensions": {
+        "length": "15 M",
+        "height": "4.5 M",
+        "weight": "6-8 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "ischigualastia",
+      "displayName": "Ischigualastia jenseni",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/ischigualastia",
+      "localRawImage": "assets/dinos/raw/ischigualastia.png",
+      "localOptimizedImage": "assets/dinos/optimized/ischigualastia.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "231.5 million to 223 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "South America, Ischigualasto Formation",
+      "dimensions": {
+        "length": "3.5 M",
+        "height": "1.87 M",
+        "weight": "2 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "kronosaurus",
+      "displayName": "Kronosaurus queenslandicus",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/kronosaurus",
+      "localRawImage": "assets/dinos/raw/kronosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/kronosaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "120 million to 110 million years ago",
+      "foodTypeRaw": [
+        "Fish",
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "water",
+      "locationFormation": "Australia, Toolebuc",
+      "dimensions": {
+        "length": "9-11 M",
+        "height": "N/A M",
+        "weight": "10.6-12.1 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "marshosaurus",
+      "displayName": "Marshosaurus bicentissimus",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/marshosaurus",
+      "localRawImage": "assets/dinos/raw/marshosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/marshosaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "155 million to 152 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Morrison",
+      "dimensions": {
+        "length": "4.5 M",
+        "height": "1.6 M",
+        "weight": "200 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "mastodonsaurus",
+      "displayName": "Mastodonsaurus giganteus",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/mastodonsaurus",
+      "localRawImage": "assets/dinos/raw/mastodonsaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/mastodonsaurus.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "242 million to 237 million years ago",
+      "foodTypeRaw": [
+        "Fish",
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Europe, Erfurt Formation",
+      "dimensions": {
+        "length": "4-6 M",
+        "height": "1 M",
+        "weight": "2 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "medusaceratops",
+      "displayName": "Medusaceratops lokii",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/medusaceratops",
+      "localRawImage": "assets/dinos/raw/medusaceratops.png",
+      "localOptimizedImage": "assets/dinos/optimized/medusaceratops.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "78 million to 77 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Judith River Formation",
+      "dimensions": {
+        "length": "6 M",
+        "height": "2.54 M",
+        "weight": "3.5 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "pachycephalosaurus",
+      "displayName": "Pachycephalosaurus wyomingensis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/pachycephalosaurus",
+      "localRawImage": "assets/dinos/raw/pachycephalosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/pachycephalosaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "70 million to 66 million years ago",
+      "foodTypeRaw": [
+        "Meat",
+        "Plants"
+      ],
+      "mealTypeNormalized": "omnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Hell Creek",
+      "dimensions": {
+        "length": "4.5 M",
+        "height": "1.55 M",
+        "weight": "370-450 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "panphagia",
+      "displayName": "Panphagia protos",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/panphagia",
+      "localRawImage": "assets/dinos/raw/panphagia.png",
+      "localOptimizedImage": "assets/dinos/optimized/panphagia.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "237 million to 227 million years ago",
+      "foodTypeRaw": [
+        "Meat",
+        "Plants",
+        "Fish",
+        "Insects"
+      ],
+      "mealTypeNormalized": "omnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "South America, Ischigualasto Formation",
+      "dimensions": {
+        "length": "1.3 M",
+        "height": "0.23 M",
+        "weight": "7.8 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "pinacosaurus",
+      "displayName": "Pinacosaurus grangeri",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/pinacosaurus",
+      "localRawImage": "assets/dinos/raw/pinacosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/pinacosaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "86.3 million to 71 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Asia, Djadockhta, Alagteeg",
+      "dimensions": {
+        "length": "5 M",
+        "height": "1 M",
+        "weight": "1.9 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "plateosaurus",
+      "displayName": "Plateosaurus trossingensis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/plateosaurus",
+      "localRawImage": "assets/dinos/raw/plateosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/plateosaurus.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "227 million to 208.5 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Europe, Trossingen",
+      "dimensions": {
+        "length": "4.8 - 10 M",
+        "height": "2.15 M",
+        "weight": "2.1 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "promastodontosaurus",
+      "displayName": "Promastodontosaurus bellmanni",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/promastodontosaurus",
+      "localRawImage": "assets/dinos/raw/promastodontosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/promastodontosaurus.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "231.7 million to 225 million years ago",
+      "foodTypeRaw": [
+        "Fish",
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "South America, Ischigualasto",
+      "dimensions": {
+        "length": "2 M",
+        "height": "0.32 M",
+        "weight": "60 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "pterodactylus",
+      "displayName": "Pterodactylus antiquus",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/pterodactylus",
+      "localRawImage": "assets/dinos/raw/pterodactylus.png",
+      "localOptimizedImage": "assets/dinos/optimized/pterodactylus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "150.8 million to 148.5 million years ago",
+      "foodTypeRaw": [
+        "Fish",
+        "Insects"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "air",
+      "locationFormation": "Europe, Altmühltal Formation (Solnhofen limestone)",
+      "dimensions": {
+        "length": "0.62 M",
+        "height": "0.56 M",
+        "weight": "0.35 kg",
+        "wingspan": "1.04 M"
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "qianzhousaurus",
+      "displayName": "Qianzhousaurus sinensis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/qianzhousaurus",
+      "localRawImage": "assets/dinos/raw/qianzhousaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/qianzhousaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "67 million to 66 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Asia, Nanxiong Formation",
+      "dimensions": {
+        "length": "7.5-9 M",
+        "height": "2 M",
+        "weight": "750 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": false,
+      "notes": "Not listed on encyclopedia index page."
+    },
+    {
+      "slug": "rajasaurus",
+      "displayName": "Rajasaurus narmadensis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/rajasaurus",
+      "localRawImage": "assets/dinos/raw/rajasaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/rajasaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "72.1 million to 67 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "India, Lameta",
+      "dimensions": {
+        "length": "6.6 M",
+        "height": "1.95 M",
+        "weight": "700-1100 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": false,
+      "notes": "Not listed on encyclopedia index page."
+    },
+    {
+      "slug": "rhamphorhynchus",
+      "displayName": "Rhamphorhynchus muensteri",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/rhamphorhynchus",
+      "localRawImage": "assets/dinos/raw/rhamphorhynchus.png",
+      "localOptimizedImage": "assets/dinos/optimized/rhamphorhynchus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "150.8 million to 148.5 million years ago",
+      "foodTypeRaw": [
+        "Fish",
+        "Insects"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "air",
+      "locationFormation": "Europe, Altmühltal Formation (Solnhofen limestone)",
+      "dimensions": {
+        "length": "1.26 M",
+        "height": "0.6 M",
+        "weight": "0.8 kg",
+        "wingspan": "1.81 M"
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "rhomaleosaurus",
+      "displayName": "Rhomaleosaurus cramptoni",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/rhomaleosaurus",
+      "localRawImage": "assets/dinos/raw/rhomaleosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/rhomaleosaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "184.2 million to 174.7 million years ago",
+      "foodTypeRaw": [
+        "Fish",
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "water",
+      "locationFormation": "Europe, Whitby mudstone",
+      "dimensions": {
+        "length": "7 M",
+        "height": "1.65 M",
+        "weight": "2.1 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "riparovenator",
+      "displayName": "Riparovenator milnerae",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/riparovenator",
+      "localRawImage": "assets/dinos/raw/riparovenator.png",
+      "localOptimizedImage": "assets/dinos/optimized/riparovenator.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "128.5 million to 127.5 million years ago",
+      "foodTypeRaw": [
+        "Meat",
+        "Fish"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Europe, Wessex",
+      "dimensions": {
+        "length": "8.5 M",
+        "height": "2.69 M",
+        "weight": "4 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": false,
+      "notes": "Not listed on encyclopedia index page."
+    },
+    {
+      "slug": "sarcosuchus",
+      "displayName": "Sarcosuchus imperator",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/sarcosuchus",
+      "localRawImage": "assets/dinos/raw/sarcosuchus.png",
+      "localOptimizedImage": "assets/dinos/optimized/sarcosuchus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "133 million to 112 million years ago",
+      "foodTypeRaw": [
+        "Meat",
+        "Fish"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Africa, Elrhaz",
+      "dimensions": {
+        "length": "9-9.5 M",
+        "height": "1.65 M",
+        "weight": "3.45-4.3  tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": false,
+      "notes": "Not listed on encyclopedia index page."
+    },
+    {
+      "slug": "sauropelta",
+      "displayName": "Sauropelta edwardsorum",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/sauropelta",
+      "localRawImage": "assets/dinos/raw/sauropelta.png",
+      "localOptimizedImage": "assets/dinos/optimized/sauropelta.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "108 million to 107 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Cloverly Formation",
+      "dimensions": {
+        "length": "5-6 M",
+        "height": "1.5 M",
+        "weight": "1.5-2 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": false,
+      "notes": "Not listed on encyclopedia index page."
+    },
+    {
+      "slug": "saurosuchus",
+      "displayName": "Saurosuchus galilei",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/saurosuchus",
+      "localRawImage": "assets/dinos/raw/saurosuchus.png",
+      "localOptimizedImage": "assets/dinos/optimized/saurosuchus.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "231.4 million to 225 million years ago",
+      "foodTypeRaw": [
+        "Meat",
+        "Fish"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "South America, Ischigualasto Formation",
+      "dimensions": {
+        "length": "7 M",
+        "height": "1.7 M",
+        "weight": "1000-1500 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "scelidosaurus",
+      "displayName": "Scelidosaurus harrisonii",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/scelidosaurus",
+      "localRawImage": "assets/dinos/raw/scelidosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/scelidosaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "196.5 million to 183 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Europe, Charmouth Mudstone Formation",
+      "dimensions": {
+        "length": "4 M",
+        "height": "1 M",
+        "weight": "270 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "shonisaurus",
+      "displayName": "Shonisaurus popularis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/shonisaurus",
+      "localRawImage": "assets/dinos/raw/shonisaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/shonisaurus.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "237 million to 227 million years ago",
+      "foodTypeRaw": [
+        "Fish"
+      ],
+      "mealTypeNormalized": "piscivore",
+      "habitatNormalized": "water",
+      "locationFormation": "North America, Luning Formation",
+      "dimensions": {
+        "length": "15 M",
+        "height": "N/A M",
+        "weight": "21.6–29.7  tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "silesaurus",
+      "displayName": "Silesaurus opolensis",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/silesaurus",
+      "localRawImage": "assets/dinos/raw/silesaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/silesaurus.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "237 million to 230 million years ago",
+      "foodTypeRaw": [
+        "Insects",
+        "Plants"
+      ],
+      "mealTypeNormalized": "omnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Europe, Keuper Claystone",
+      "dimensions": {
+        "length": "2.1-2.3 M",
+        "height": "0.83 M",
+        "weight": null,
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "smilosuchus",
+      "displayName": "Smilosuchus gregorii",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/smilosuchus",
+      "localRawImage": "assets/dinos/raw/smilosuchus.png",
+      "localOptimizedImage": "assets/dinos/optimized/smilosuchus.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "221.5 million to 205.6 million years ago",
+      "foodTypeRaw": [
+        "Meat",
+        "Fish"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Chinle Formation",
+      "dimensions": {
+        "length": "7-12 M",
+        "height": "1.8 M",
+        "weight": "~4 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "stegoceras",
+      "displayName": "Stegoceras validum",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/stegoceras",
+      "localRawImage": "assets/dinos/raw/stegoceras.png",
+      "localOptimizedImage": "assets/dinos/optimized/stegoceras.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "77.5 million to 74 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Dinosaur Park, Oldman",
+      "dimensions": {
+        "length": "2.5 M",
+        "height": "0.88 M",
+        "weight": "40 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": false,
+      "notes": "Not listed on encyclopedia index page."
+    },
+    {
+      "slug": "stegosaurus",
+      "displayName": "Stegosaurus stenops",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/stegosaurus",
+      "localRawImage": "assets/dinos/raw/stegosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/stegosaurus.webp",
+      "periodGroup": "Jurassic",
+      "timeStagesText": "155 million to 145 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Morrison Formation",
+      "dimensions": {
+        "length": "6.5 M",
+        "height": "3.1 M",
+        "weight": "3.5 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "styxosaurus",
+      "displayName": "Styxosaurus snowii",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/styxosaurus",
+      "localRawImage": "assets/dinos/raw/styxosaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/styxosaurus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "85 million to 80 million years ago",
+      "foodTypeRaw": [
+        "Fish",
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "water",
+      "locationFormation": "North America, Niobrara Formation, Pierre Shale",
+      "dimensions": {
+        "length": "10.5 M",
+        "height": "N/A M",
+        "weight": "2.3 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": false,
+      "notes": "Not listed on encyclopedia index page."
+    },
+    {
+      "slug": "unaysaurus",
+      "displayName": "Unaysaurus tolentinoi",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/unaysaurus",
+      "localRawImage": "assets/dinos/raw/unaysaurus.png",
+      "localOptimizedImage": "assets/dinos/optimized/unaysaurus.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "226 million to 225 million years ago",
+      "foodTypeRaw": [
+        "Plants"
+      ],
+      "mealTypeNormalized": "herbivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Europe, Caturrita Formation",
+      "dimensions": {
+        "length": "2.5 M",
+        "height": "0.7-0.8 M",
+        "weight": "70 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": true,
+      "notes": ""
+    },
+    {
+      "slug": "yutyrannus",
+      "displayName": "Yutyrannus huali",
+      "factsAppPageUrl": "https://www.facts.app/dinosaur/yutyrannus",
+      "localRawImage": "assets/dinos/raw/yutyrannus.png",
+      "localOptimizedImage": "assets/dinos/optimized/yutyrannus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "125 million to 121 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Asia, Yixian Formation",
+      "dimensions": {
+        "length": "7.5-9 M",
+        "height": "2.9 M",
+        "weight": "1.4 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": false,
+      "notes": "Not listed on encyclopedia index page."
+    }
+  ]
+}

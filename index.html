@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dino World</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ── Nav ─────────────────────────────────────── -->
+  <nav class="topnav">
+    <div class="nav-brand">
+      <span class="brand-icon">🦕</span>
+      <span class="brand-text">Dino World</span>
+    </div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-tab="map">🗺️ World Map</button>
+      <button class="nav-tab" data-tab="cards">🃏 Dino Cards</button>
+      <button class="nav-tab" data-tab="battle">⚔️ Fight!</button>
+    </div>
+    <div class="nav-spacer"></div>
+  </nav>
+
+  <!-- ══════════ TAB: WORLD MAP ══════════ -->
+  <section class="tab-content active" id="tab-map">
+    <div class="map-header">
+      <h2>🌍 Dinosaur World Map</h2>
+      <p>Tap a dinosaur to learn where its fossils were found!</p>
+      <div class="map-filters">
+        <button class="map-pill active" data-era="all">All Eras</button>
+        <button class="map-pill era-permian" data-era="Permian">Permian</button>
+        <button class="map-pill era-triassic" data-era="Triassic">Triassic</button>
+        <button class="map-pill era-jurassic" data-era="Jurassic">Jurassic</button>
+        <button class="map-pill era-cretaceous" data-era="Cretaceous">Cretaceous</button>
+      </div>
+    </div>
+    <div id="leaflet-map"></div>
+  </section>
+
+  <!-- ══════════ TAB: DINO CARDS ══════════ -->
+  <section class="tab-content" id="tab-cards">
+    <div class="cards-header">
+      <h2>🃏 Dino Cards</h2>
+      <p>Browse and compare all 60 species</p>
+    </div>
+    <div class="cards-controls">
+      <div class="filter-group">
+        <label>Period</label>
+        <div class="pills" id="period-filters">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="Permian">Permian</button>
+          <button class="pill" data-value="Triassic">Triassic</button>
+          <button class="pill" data-value="Jurassic">Jurassic</button>
+          <button class="pill" data-value="Cretaceous">Cretaceous</button>
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>Diet</label>
+        <div class="pills" id="meal-filters">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="carnivore">Carnivore</button>
+          <button class="pill" data-value="herbivore">Herbivore</button>
+          <button class="pill" data-value="omnivore">Omnivore</button>
+          <button class="pill" data-value="piscivore">Piscivore</button>
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>Habitat</label>
+        <div class="pills" id="habitat-filters">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="land">Land</button>
+          <button class="pill" data-value="air">Air</button>
+          <button class="pill" data-value="water">Water</button>
+        </div>
+      </div>
+      <div class="filter-group search-group">
+        <label>Search</label>
+        <input type="text" id="search" placeholder="Search species...">
+      </div>
+    </div>
+    <div class="cards-status"><span id="cards-count">60 species</span></div>
+    <div id="cards-grid" class="cards-grid"></div>
+  </section>
+
+  <!-- ══════════ TAB: BATTLE ══════════ -->
+  <section class="tab-content" id="tab-battle">
+    <!-- Trainer scoreboard bar -->
+    <div class="trainer-bar">
+      <div class="trainer-name-wrap">
+        <span class="trainer-label">TRAINER</span>
+        <input type="text" id="trainer-name" class="trainer-input" value="Ash" maxlength="16" placeholder="Name">
+      </div>
+      <div class="trainer-scores">
+        <div class="trainer-score you-score">
+          <span class="score-label">YOU</span>
+          <span class="score-val" id="score-wins">0</span>
+        </div>
+        <div class="score-divider"></div>
+        <div class="trainer-score cpu-score">
+          <span class="score-label">CPU</span>
+          <span class="score-val" id="score-losses">0</span>
+        </div>
+      </div>
+      <button class="share-btn" id="share-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        Share Score
+      </button>
+    </div>
+
+    <!-- Phase: Pick -->
+    <div class="battle-phase" id="battle-pick">
+      <div class="battle-header">
+        <h2>⚔️ Choose Your Fighter!</h2>
+        <p>Pick a dinosaur for battle. CPU will choose a random opponent.</p>
+      </div>
+      <div class="picker-search-wrap">
+        <input type="text" id="picker-search" placeholder="Search dinosaurs...">
+      </div>
+      <div id="picker-grid" class="picker-grid"></div>
+    </div>
+
+    <!-- Phase: Matchup -->
+    <div class="battle-phase hidden" id="battle-matchup">
+      <div class="battle-header">
+        <h2>⚔️ Battle!</h2>
+      </div>
+      <div class="matchup-strip">
+        <div class="matchup-fighter" id="mu-player">
+          <div class="mu-label">YOU</div>
+          <img id="mu-player-img" src="" alt="">
+          <div class="mu-name" id="mu-player-name"></div>
+        </div>
+        <div class="matchup-vs">VS</div>
+        <div class="matchup-fighter" id="mu-cpu">
+          <div class="mu-label">CPU</div>
+          <img id="mu-cpu-img" src="" alt="">
+          <div class="mu-name" id="mu-cpu-name"></div>
+          <button class="reroll-btn" id="reroll-btn">🎲 Reroll</button>
+        </div>
+      </div>
+      <div class="matchup-actions">
+        <button class="btn-primary" id="start-fight-btn">Start Fight</button>
+        <button class="btn-secondary" id="auto-fight-btn">Auto-Battle (AI)</button>
+        <button class="btn-ghost" id="back-pick-btn">← Back</button>
+      </div>
+    </div>
+
+    <!-- Phase: Fight -->
+    <div class="battle-phase hidden" id="battle-fight">
+      <div class="arena">
+        <div class="arena-side arena-player">
+          <div class="arena-name" id="arena-p-name"></div>
+          <div class="arena-hp-bar"><div class="hp-fill player-hp" id="arena-p-hp"></div></div>
+          <div class="arena-hp-text" id="arena-p-hp-text"></div>
+          <div class="arena-dino-wrap">
+            <img id="arena-p-img" src="" alt="" class="arena-dino-img">
+          </div>
+        </div>
+        <div class="arena-center">
+          <div class="turn-indicator" id="turn-indicator">Your Turn</div>
+        </div>
+        <div class="arena-side arena-cpu">
+          <div class="arena-name" id="arena-c-name"></div>
+          <div class="arena-hp-bar"><div class="hp-fill cpu-hp" id="arena-c-hp"></div></div>
+          <div class="arena-hp-text" id="arena-c-hp-text"></div>
+          <div class="arena-dino-wrap">
+            <img id="arena-c-img" src="" alt="" class="arena-dino-img flip">
+          </div>
+        </div>
+      </div>
+      <div class="battle-log" id="battle-log"></div>
+      <div class="move-buttons" id="move-buttons"></div>
+    </div>
+
+    <!-- Phase: Result -->
+    <div class="battle-phase hidden" id="battle-result">
+      <div class="result-banner" id="result-banner"></div>
+      <div class="result-matchup" id="result-matchup">
+        <div class="result-fighter" id="result-player">
+          <div class="result-trophy" id="result-player-trophy"></div>
+          <img id="result-player-img" src="" alt="">
+          <div class="result-fighter-name" id="result-player-name"></div>
+          <div class="result-fighter-hp" id="result-player-hp"></div>
+        </div>
+        <div class="result-vs">VS</div>
+        <div class="result-fighter" id="result-cpu">
+          <div class="result-trophy" id="result-cpu-trophy"></div>
+          <img id="result-cpu-img" src="" alt="">
+          <div class="result-fighter-name" id="result-cpu-name"></div>
+          <div class="result-fighter-hp" id="result-cpu-hp"></div>
+        </div>
+      </div>
+      <div class="result-details" id="result-details"></div>
+      <div class="result-share">
+        <button class="share-result-btn" id="share-result-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Share This Battle
+        </button>
+        <button class="share-x-btn" id="share-x-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Post to X
+        </button>
+      </div>
+      <div class="result-actions">
+        <button class="btn-primary" id="rematch-btn">Rematch</button>
+        <button class="btn-secondary" id="new-fight-btn">New Fight</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ MODAL: Card Detail ══════════ -->
+  <div class="modal-overlay" id="card-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-body">
+        <div class="modal-image-wrap">
+          <img id="modal-img" src="" alt="">
+        </div>
+        <div class="modal-info">
+          <h2 id="modal-name"></h2>
+          <div class="modal-tags" id="modal-tags"></div>
+          <div class="modal-stats-bars" id="modal-stats"></div>
+          <table class="modal-table">
+            <tr><th>Period</th><td id="modal-period"></td></tr>
+            <tr><th>Time</th><td id="modal-time"></td></tr>
+            <tr><th>Diet</th><td id="modal-diet"></td></tr>
+            <tr><th>Habitat</th><td id="modal-habitat"></td></tr>
+            <tr><th>Location</th><td id="modal-location"></td></tr>
+            <tr><th>Length</th><td id="modal-length"></td></tr>
+            <tr><th>Height</th><td id="modal-height"></td></tr>
+            <tr><th>Weight</th><td id="modal-weight"></td></tr>
+            <tr id="modal-wingspan-row"><th>Wingspan</th><td id="modal-wingspan"></td></tr>
+            <tr><th>Class</th><td id="modal-class"></td></tr>
+          </table>
+          <div class="modal-moves" id="modal-moves"></div>
+          <a id="modal-link" href="#" target="_blank" rel="noopener">View on Facts.app →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ CREDITS ══════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">🦕 Dino World</div>
+      <div class="footer-credits">
+        <h4>Credits &amp; Sources</h4>
+        <ul>
+          <li><strong>Dinosaur data &amp; imagery</strong> &mdash; <a href="https://www.facts.app/encyclopedia" target="_blank" rel="noopener">Facts.app Encyclopedia</a>. All species metadata, 3D renders, and scientific information sourced from Facts.app.</li>
+          <li><strong>3D dinosaur art</strong> &mdash; Original 3D models and renders by <a href="https://www.facts.app" target="_blank" rel="noopener">Facts.app</a> artists including Raul Ramos, with paleontology consultation by Taylor Oswald.</li>
+          <li><strong>Map tiles</strong> &mdash; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a> &amp; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors.</li>
+          <li><strong>Interactive maps</strong> &mdash; <a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet.js</a> by Volodymyr Agafonkin.</li>
+          <li><strong>Image optimization</strong> &mdash; <a href="https://sharp.pixelplumbing.com" target="_blank" rel="noopener">Sharp</a> by Lovell Fuller.</li>
+          <li><strong>CMS backend</strong> &mdash; Species data retrieved via <a href="https://www.sanity.io" target="_blank" rel="noopener">Sanity.io</a> public API.</li>
+        </ul>
+      </div>
+      <div class="footer-disclaimer">
+        This is a fan project for educational purposes. All dinosaur imagery and data are property of their respective creators at Facts.app. Not affiliated with or endorsed by Facts.app.
+      </div>
+      <div class="footer-copy">&copy; 2026 Dino World. Built with Claude.</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

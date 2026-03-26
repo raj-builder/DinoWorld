@@ -1,0 +1,18 @@
+{
+  "name": "dino-world",
+  "version": "0.1.0",
+  "description": "Dino World — local-first dinosaur battle game",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-factsapp-dinos.js",
+    "optimize": "node scripts/optimize-dino-images.js",
+    "report": "node scripts/generate-p0-report.js",
+    "stats": "node scripts/generate-stats.js",
+    "p0": "npm run fetch && npm run optimize && npm run report && npm run stats",
+    "serve": "python3 -m http.server 8080"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "sharp": "^0.33.2"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-03-26T06:24:26.873Z",
+  "phase": "P0",
+  "summary": {
+    "totalSpeciesInCatalog": 60,
+    "totalListedOnEncyclopedia": 52,
+    "imagesDownloaded": 60,
+    "imagesOptimized": 60,
+    "imagesFailed": 0
+  },
+  "byPeriod": {
+    "Permian": {
+      "count": 1,
+      "species": [
+        "dimetrodon"
+      ]
+    },
+    "Triassic": {
+      "count": 13,
+      "species": [
+        "coelophysis",
+        "eoraptor",
+        "herrerasaurus",
+        "ischigualastia",
+        "mastodonsaurus",
+        "panphagia",
+        "plateosaurus",
+        "promastodontosaurus",
+        "saurosuchus",
+        "shonisaurus",
+        "silesaurus",
+        "smilosuchus",
+        "unaysaurus"
+      ]
+    },
+    "Jurassic": {
+      "count": 19,
+      "species": [
+        "allosaurus",
+        "alpkarakush",
+        "brachiosaurus",
+        "camarasaurus",
+        "ceratosaurus",
+        "compsognathus",
+        "cryolophosaurus",
+        "dakosaurus",
+        "dicraeosaurus",
+        "dimorphodon",
+        "gigantspinosaurus",
+        "glacialisaurus",
+        "guanlong",
+        "marshosaurus",
+        "pterodactylus",
+        "rhamphorhynchus",
+        "rhomaleosaurus",
+        "scelidosaurus",
+        "stegosaurus"
+      ]
+    },
+    "Cretaceous": {
+      "count": 27,
+      "species": [
+        "alamosaurus",
+        "alioramus",
+        "ankylosaurus",
+        "austroraptor",
+        "caletordraco",
+        "chasmosaurus",
+        "corythosaurus",
+        "daspletosaurus",
+        "deinonychus",
+        "einiosaurus",
+        "ekrixinatosaurus",
+        "eonatator",
+        "hatzegopteryx",
+        "iguanodon",
+        "inawentu",
+        "kronosaurus",
+        "medusaceratops",
+        "pachycephalosaurus",
+        "pinacosaurus",
+        "qianzhousaurus",
+        "rajasaurus",
+        "riparovenator",
+        "sarcosuchus",
+        "sauropelta",
+        "stegoceras",
+        "styxosaurus",
+        "yutyrannus"
+      ]
+    }
+  },
+  "byMealType": {
+    "carnivore": 34,
+    "herbivore": 21,
+    "omnivore": 4,
+    "piscivore": 1,
+    "insectivore": 0,
+    "mixed": 0,
+    "unknown": 0
+  },
+  "byHabitat": {
+    "land": 49,
+    "air": 5,
+    "water": 6
+  },
+  "unlistedOnEncyclopedia": [
+    "qianzhousaurus",
+    "rajasaurus",
+    "riparovenator",
+    "sarcosuchus",
+    "sauropelta",
+    "stegoceras",
+    "styxosaurus",
+    "yutyrannus"
+  ],
+  "issues": [],
+  "diskUsage": {
+    "rawImagesBytes": 126661579,
+    "rawImagesMB": 120.79,
+    "optimizedImagesBytes": 4840116,
+    "optimizedImagesMB": 4.62,
+    "savingsPercent": 96.2
+  }
+}
