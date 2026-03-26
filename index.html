@@ -18,6 +18,7 @@
       <button class="nav-tab active" data-tab="map">🗺️ World Map</button>
       <button class="nav-tab" data-tab="cards">🃏 Dino Cards</button>
       <button class="nav-tab" data-tab="battle">⚔️ Fight!</button>
+      <button class="nav-tab" data-tab="create">🎨 Create</button>
     </div>
     <div class="nav-spacer"></div>
   </nav>
@@ -205,6 +206,63 @@
       <div class="result-actions">
         <button class="btn-primary" id="rematch-btn">Rematch</button>
         <button class="btn-secondary" id="new-fight-btn">New Fight</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ TAB: CREATE DINO ══════════ -->
+  <section class="tab-content" id="tab-create">
+    <div class="create-header">
+      <h2>🎨 Make Your Own Dinosaur</h2>
+      <p>Pick parts, give it a name, choose a color &mdash; make it yours!</p>
+    </div>
+    <div class="create-layout">
+      <!-- Left: parts palette -->
+      <div class="parts-palette">
+        <div class="palette-label">TAP TO ADD PARTS</div>
+        <div class="parts-grid" id="parts-grid"></div>
+      </div>
+      <!-- Center: canvas -->
+      <div class="create-canvas-area">
+        <canvas id="create-canvas" width="560" height="480"></canvas>
+        <div class="canvas-hint" id="canvas-hint">Tap dino parts on the left to build your creature!</div>
+      </div>
+      <!-- Right: controls -->
+      <div class="create-controls">
+        <div class="ctrl-section">
+          <label class="ctrl-label">NAME YOUR DINO</label>
+          <input type="text" id="create-name" class="ctrl-input" value="" maxlength="24" placeholder="Tap for a name...">
+          <button class="ctrl-btn-small" id="random-name-btn">🎲 Random Name</button>
+        </div>
+        <div class="ctrl-section">
+          <label class="ctrl-label">SIZE</label>
+          <div class="size-pills" id="size-pills">
+            <button class="size-pill" data-size="0.5">Small</button>
+            <button class="size-pill active" data-size="1">Medium</button>
+            <button class="size-pill" data-size="1.8">Huge</button>
+          </div>
+        </div>
+        <div class="ctrl-section">
+          <label class="ctrl-label">COLOR TINT</label>
+          <div class="color-swatches" id="color-swatches">
+            <button class="swatch active" data-color="none" style="background:linear-gradient(135deg,#ddd,#fff)" title="Original"></button>
+            <button class="swatch" data-color="#ef5350" style="background:#ef5350" title="Red"></button>
+            <button class="swatch" data-color="#42a5f5" style="background:#42a5f5" title="Blue"></button>
+            <button class="swatch" data-color="#66bb6a" style="background:#66bb6a" title="Green"></button>
+            <button class="swatch" data-color="#ffa726" style="background:#ffa726" title="Orange"></button>
+            <button class="swatch" data-color="#ab47bc" style="background:#ab47bc" title="Purple"></button>
+            <button class="swatch" data-color="#ec407a" style="background:#ec407a" title="Pink"></button>
+            <button class="swatch" data-color="#ffee58" style="background:#ffee58" title="Yellow"></button>
+          </div>
+        </div>
+        <div class="ctrl-section ctrl-actions">
+          <button class="btn-primary" id="create-share-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share Creation
+          </button>
+          <button class="btn-secondary" id="create-download-btn">Download</button>
+          <button class="btn-ghost" id="create-clear-btn">Clear Canvas</button>
+        </div>
       </div>
     </div>
   </section>

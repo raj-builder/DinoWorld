@@ -33,6 +33,7 @@
     initMap();
     renderCards();
     renderPicker();
+    initCreateTab();
   }).catch(err => {
     document.getElementById('cards-grid').innerHTML = `<div class="no-results">Error loading data: ${err.message}. Make sure to serve via HTTP (not file://).</div>`;
   });
@@ -698,4 +699,290 @@
     toastEl.classList.add('show');
     setTimeout(() => toastEl.classList.remove('show'), 2200);
   }
+
+  /* ══════════════════════════════════════════════════════
+     CREATE DINO TAB
+     ══════════════════════════════════════════════════════ */
+  const DINO_NAMES_FIRST = [
+    'Mega','Thunder','Blaze','Frost','Shadow','Storm','Turbo','Spike',
+    'Razor','Fang','Iron','Crystal','Chaos','Nitro','Cosmic','Magma',
+    'Phantom','Neon','Pixel','Ultra','Star','Atomic','Hyper','Solar',
+    'Crunchy','Fluffy','Silly','Wobble','Grumpy','Jolly','Snappy','Dizzy',
+  ];
+  const DINO_NAMES_SECOND = [
+    'saurus','raptor','don','tops','dactyl','claw','tooth','bite',
+    'horn','tail','wing','jaw','skull','spine','scale','frill',
+    'chomp','stomp','zilla','tron','asaur','odon','nyx','rex',
+    'munch','wiggle','snout','plop','bonk','flop','derp','noodle',
+  ];
+
+  let placedParts = [];
+  let createScale = 1;
+  let createColor = 'none';
+  let loadedImages = {};
+  let dragPart = null;
+
+  function initCreateTab() {
+    const partsGrid = document.getElementById('parts-grid');
+    // Use catalog dino images as "parts"
+    catalog.forEach(s => {
+      const thumb = document.createElement('div');
+      thumb.className = 'part-thumb';
+      thumb.innerHTML = `<img src="${s.localOptimizedImage}" alt="${s.displayName}" loading="lazy">`;
+      thumb.addEventListener('click', () => addPartToCanvas(s));
+      partsGrid.appendChild(thumb);
+    });
+
+    // Random name button
+    document.getElementById('random-name-btn').addEventListener('click', () => {
+      document.getElementById('create-name').value = generateDinoName();
+    });
+    // Auto-fill a name on load
+    document.getElementById('create-name').value = generateDinoName();
+
+    // Size pills
+    document.getElementById('size-pills').addEventListener('click', e => {
+      const pill = e.target.closest('.size-pill');
+      if (!pill) return;
+      document.querySelectorAll('.size-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      createScale = parseFloat(pill.dataset.size);
+      redrawCanvas();
+    });
+
+    // Color swatches
+    document.getElementById('color-swatches').addEventListener('click', e => {
+      const sw = e.target.closest('.swatch');
+      if (!sw) return;
+      document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+      sw.classList.add('active');
+      createColor = sw.dataset.color;
+      redrawCanvas();
+    });
+
+    // Canvas drag support
+    const canvas = document.getElementById('create-canvas');
+    canvas.addEventListener('mousedown', onCanvasPointerDown);
+    canvas.addEventListener('mousemove', onCanvasPointerMove);
+    canvas.addEventListener('mouseup', onCanvasPointerUp);
+    canvas.addEventListener('touchstart', onCanvasTouchStart, { passive: false });
+    canvas.addEventListener('touchmove', onCanvasTouchMove, { passive: false });
+    canvas.addEventListener('touchend', onCanvasPointerUp);
+
+    // Clear
+    document.getElementById('create-clear-btn').addEventListener('click', () => {
+      placedParts = [];
+      redrawCanvas();
+      document.getElementById('canvas-hint').classList.remove('hidden');
+    });
+
+    // Share
+    document.getElementById('create-share-btn').addEventListener('click', shareCreation);
+    document.getElementById('create-download-btn').addEventListener('click', downloadCreation);
+  }
+
+  function generateDinoName() {
+    const a = DINO_NAMES_FIRST[Math.floor(Math.random() * DINO_NAMES_FIRST.length)];
+    const b = DINO_NAMES_SECOND[Math.floor(Math.random() * DINO_NAMES_SECOND.length)];
+    return a + b;
+  }
+
+  function addPartToCanvas(species) {
+    document.getElementById('canvas-hint').classList.add('hidden');
+    const canvas = document.getElementById('create-canvas');
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    // Place in a random-ish position near center
+    const cx = canvas.width / 2 + (Math.random() - 0.5) * 200;
+    const cy = canvas.height / 2 + (Math.random() - 0.5) * 150;
+
+    const part = {
+      slug: species.slug,
+      src: species.localOptimizedImage,
+      x: cx,
+      y: cy,
+      w: 100,
+      h: 100,
+      rotation: (Math.random() - 0.5) * 30,
+      flipX: Math.random() > 0.5,
+    };
+
+    // Preload image if not loaded
+    if (!loadedImages[part.src]) {
+      const img = new Image();
+      img.onload = () => {
+        loadedImages[part.src] = img;
+        redrawCanvas();
+      };
+      img.src = part.src;
+    }
+
+    placedParts.push(part);
+    redrawCanvas();
+  }
+
+  function getCanvasCoord(e, canvas) {
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    return {
+      x: (clientX - rect.left) * scaleX,
+      y: (clientY - rect.top) * scaleY,
+    };
+  }
+
+  function hitTestPart(mx, my) {
+    // Check from top (last placed) to bottom
+    for (let i = placedParts.length - 1; i >= 0; i--) {
+      const p = placedParts[i];
+      const s = createScale;
+      const hw = (p.w * s) / 2;
+      const hh = (p.h * s) / 2;
+      if (mx >= p.x - hw && mx <= p.x + hw && my >= p.y - hh && my <= p.y + hh) {
+        return i;
+      }
+    }
+    return -1;
+  }
+
+  function onCanvasPointerDown(e) {
+    const canvas = document.getElementById('create-canvas');
+    const { x, y } = getCanvasCoord(e, canvas);
+    const idx = hitTestPart(x, y);
+    if (idx >= 0) {
+      dragPart = { idx, offsetX: x - placedParts[idx].x, offsetY: y - placedParts[idx].y };
+      // Move to front
+      const part = placedParts.splice(idx, 1)[0];
+      placedParts.push(part);
+      dragPart.idx = placedParts.length - 1;
+    }
+  }
+
+  function onCanvasTouchStart(e) {
+    e.preventDefault();
+    onCanvasPointerDown(e);
+  }
+
+  function onCanvasPointerMove(e) {
+    if (!dragPart) return;
+    const canvas = document.getElementById('create-canvas');
+    const { x, y } = getCanvasCoord(e, canvas);
+    placedParts[dragPart.idx].x = x - dragPart.offsetX;
+    placedParts[dragPart.idx].y = y - dragPart.offsetY;
+    redrawCanvas();
+  }
+
+  function onCanvasTouchMove(e) {
+    e.preventDefault();
+    onCanvasPointerMove(e);
+  }
+
+  function onCanvasPointerUp() {
+    dragPart = null;
+  }
+
+  function redrawCanvas() {
+    const canvas = document.getElementById('create-canvas');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // White background
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Draw each placed part
+    for (const part of placedParts) {
+      const img = loadedImages[part.src];
+      if (!img) continue;
+      const s = createScale;
+      const w = part.w * s;
+      const h = part.h * s;
+
+      ctx.save();
+      ctx.translate(part.x, part.y);
+      ctx.rotate((part.rotation * Math.PI) / 180);
+      if (part.flipX) ctx.scale(-1, 1);
+
+      // Draw image, optionally tinted
+      if (createColor !== 'none') {
+        // Render tinted version via offscreen canvas
+        const off = document.createElement('canvas');
+        off.width = Math.ceil(w);
+        off.height = Math.ceil(h);
+        const oc = off.getContext('2d');
+        oc.drawImage(img, 0, 0, w, h);
+        oc.globalCompositeOperation = 'source-atop';
+        oc.fillStyle = createColor;
+        oc.globalAlpha = 0.4;
+        oc.fillRect(0, 0, w, h);
+        ctx.drawImage(off, -w / 2, -h / 2);
+      } else {
+        ctx.drawImage(img, -w / 2, -h / 2, w, h);
+      }
+
+      ctx.restore();
+    }
+
+    // Watermark
+    if (placedParts.length > 0) {
+      const name = document.getElementById('create-name').value.trim() || 'Unnamed';
+      const trainer = document.getElementById('trainer-name')?.value.trim() || '';
+      ctx.save();
+      ctx.font = '600 14px -apple-system, sans-serif';
+      ctx.fillStyle = 'rgba(0,0,0,0.25)';
+      ctx.textAlign = 'right';
+      const credit = trainer ? `${name} - made by ${trainer} in Dino World` : `${name} - Dino World`;
+      ctx.fillText(credit, canvas.width - 12, canvas.height - 12);
+      ctx.restore();
+    }
+  }
+
+  function getExportCanvas() {
+    // Re-render with watermark baked in
+    redrawCanvas();
+    return document.getElementById('create-canvas');
+  }
+
+  function shareCreation() {
+    const canvas = getExportCanvas();
+    canvas.toBlob(async (blob) => {
+      if (!blob) { showToast('Could not create image'); return; }
+      const name = document.getElementById('create-name').value.trim() || 'My Dino';
+      const trainer = document.getElementById('trainer-name')?.value.trim() || '';
+      const text = trainer
+        ? `Check out "${name}" - my custom dinosaur made by ${trainer} in Dino World!`
+        : `Check out "${name}" - my custom dinosaur from Dino World!`;
+
+      if (navigator.share && navigator.canShare) {
+        const file = new File([blob], 'my-dino.png', { type: 'image/png' });
+        const shareData = { text, files: [file] };
+        if (navigator.canShare(shareData)) {
+          try { await navigator.share(shareData); return; } catch (_) {}
+        }
+      }
+      // Fallback: copy text
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast('Caption copied! Save the image with Download button.');
+      } catch (_) {
+        showToast('Use Download button to save your dino');
+      }
+    }, 'image/png');
+  }
+
+  function downloadCreation() {
+    const canvas = getExportCanvas();
+    const name = document.getElementById('create-name').value.trim() || 'my-dino';
+    const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const link = document.createElement('a');
+    link.download = `${slug}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    showToast('Dino saved!');
+  }
+
+  // Name input triggers canvas redraw (for watermark)
+  document.getElementById('create-name')?.addEventListener('input', redrawCanvas);
 })();

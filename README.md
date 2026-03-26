@@ -31,6 +31,9 @@ All 60 species displayed as cards with filterable tags (period, diet, habitat) a
 ### ⚔️ Battle
 Turn-based 1v1 fights. Pick your dinosaur, CPU picks a random opponent (reroll if you don't like it). Choose from special moves unique to each species, or defend to halve incoming damage. Auto-battle mode lets the AI play both sides. Trainer scoreboard tracks your win/loss record across the session. Share results to X or clipboard.
 
+### 🎨 Create Your Own Dino
+A fun creative mode — tap dino parts from the palette to place them on a canvas. Drag parts around to arrange your custom creature. Give it a silly name (with a random name generator for inspiration), pick a size (small / medium / huge), apply a color tint, then download or share your creation with a "made by" watermark.
+
 ---
 
 ## How It Was Built
