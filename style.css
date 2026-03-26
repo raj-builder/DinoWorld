@@ -272,7 +272,7 @@ body {
   box-shadow: var(--shadow-lg);
 }
 .card-img-wrap {
-  background: var(--surface2);
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,7 +284,7 @@ body {
   height: 100%;
   object-fit: contain;
 }
-.card-body { padding: 0.6rem 0.75rem 0.7rem; }
+.card-body { padding: 0.6rem 0.75rem 0.7rem; background: var(--surface2); }
 .card-name {
   font-size: 0.85rem;
   font-weight: 700;
@@ -397,7 +397,7 @@ body {
 .modal-image-wrap {
   flex: 0 0 240px;
   aspect-ratio: 1;
-  background: var(--surface2);
+  background: #ffffff;
   border-radius: 12px;
   display: flex;
   align-items: center;

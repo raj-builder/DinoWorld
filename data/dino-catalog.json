@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-03-26T06:22:37.133Z",
   "sourceApi": "https://r19ry25y.apicdn.sanity.io/v2021-10-21/data/query/production",
-  "totalSpecies": 62,
+  "totalSpecies": 64,
   "species": [
     {
       "slug": "alamosaurus",
@@ -1580,6 +1580,56 @@
       "imageVerified": true,
       "listedOnEncyclopedia": false,
       "notes": "Feathered raptor with a deadly sickle claw on each foot"
+    },
+    {
+      "slug": "spinosaurus-aegyptiacus",
+      "displayName": "Spinosaurus aegyptiacus",
+      "factsAppPageUrl": "https://en.wikipedia.org/wiki/Spinosaurus",
+      "localRawImage": "assets/dinos/raw/spinosaurus-aegyptiacus.png",
+      "localOptimizedImage": "assets/dinos/optimized/spinosaurus-aegyptiacus.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "99 million to 93.5 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "water",
+      "locationFormation": "Africa, Bahariya Formation",
+      "dimensions": {
+        "length": "15 M",
+        "height": null,
+        "weight": "7.4 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": false,
+      "notes": "Largest carnivorous dinosaur, semi-aquatic with a massive sail"
+    },
+    {
+      "slug": "postosuchus-kirkpatricki",
+      "displayName": "Postosuchus kirkpatricki",
+      "factsAppPageUrl": "https://en.wikipedia.org/wiki/Postosuchus",
+      "localRawImage": "assets/dinos/raw/postosuchus-kirkpatricki.png",
+      "localOptimizedImage": "assets/dinos/optimized/postosuchus-kirkpatricki.webp",
+      "periodGroup": "Triassic",
+      "timeStagesText": "228 million to 202 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Dockum Group",
+      "dimensions": {
+        "length": "5 M",
+        "height": null,
+        "weight": "300 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": false,
+      "notes": "Apex predator of the Late Triassic, walked on four or two legs"
     }
   ]
 }

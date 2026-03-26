@@ -1734,5 +1734,61 @@
       "lng": 100
     },
     "battleClass": "speedster"
+  },
+  "spinosaurus-aegyptiacus": {
+    "stats": {
+      "hp": 200,
+      "attack": 95,
+      "defense": 84,
+      "speed": 60,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Sail Slam",
+        "type": "attack",
+        "power": 40,
+        "description": "Massive dorsal sail swings with devastating force"
+      },
+      {
+        "name": "Aquatic Ambush",
+        "type": "attack",
+        "power": 35,
+        "description": "Lunges from water to grab prey in crocodile-like jaws"
+      }
+    ],
+    "coords": {
+      "lat": 30,
+      "lng": 31
+    },
+    "battleClass": "heavy predator"
+  },
+  "postosuchus-kirkpatricki": {
+    "stats": {
+      "hp": 90,
+      "attack": 70,
+      "defense": 37,
+      "speed": 55,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Crushing Jaws",
+        "type": "attack",
+        "power": 30,
+        "description": "Powerful rauisuchid jaws crush bone"
+      },
+      {
+        "name": "Bipedal Charge",
+        "type": "attack",
+        "power": 25,
+        "description": "Rears up on hind legs for a surprise charge"
+      }
+    ],
+    "coords": {
+      "lat": 33,
+      "lng": -97
+    },
+    "battleClass": "balanced"
   }
 }
