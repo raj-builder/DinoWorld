@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-03-26T06:22:37.133Z",
   "sourceApi": "https://r19ry25y.apicdn.sanity.io/v2021-10-21/data/query/production",
-  "totalSpecies": 60,
+  "totalSpecies": 62,
   "species": [
     {
       "slug": "alamosaurus",
@@ -396,7 +396,7 @@
       ],
       "mealTypeNormalized": "carnivore",
       "habitatNormalized": "water",
-      "locationFormation": "Europe, Mörnsheim Formation",
+      "locationFormation": "Europe, M\u00f6rnsheim Formation",
       "dimensions": {
         "length": "4-5 M",
         "height": "N/A M",
@@ -728,7 +728,7 @@
       ],
       "mealTypeNormalized": "carnivore",
       "habitatNormalized": "air",
-      "locationFormation": "Europe, Densuş Ciula",
+      "locationFormation": "Europe, Densu\u015f Ciula",
       "dimensions": {
         "length": "10 M",
         "height": "4.6 M",
@@ -1086,7 +1086,7 @@
       ],
       "mealTypeNormalized": "carnivore",
       "habitatNormalized": "air",
-      "locationFormation": "Europe, Altmühltal Formation (Solnhofen limestone)",
+      "locationFormation": "Europe, Altm\u00fchltal Formation (Solnhofen limestone)",
       "dimensions": {
         "length": "0.62 M",
         "height": "0.56 M",
@@ -1162,7 +1162,7 @@
       ],
       "mealTypeNormalized": "carnivore",
       "habitatNormalized": "air",
-      "locationFormation": "Europe, Altmühltal Formation (Solnhofen limestone)",
+      "locationFormation": "Europe, Altm\u00fchltal Formation (Solnhofen limestone)",
       "dimensions": {
         "length": "1.26 M",
         "height": "0.6 M",
@@ -1345,7 +1345,7 @@
       "dimensions": {
         "length": "15 M",
         "height": "N/A M",
-        "weight": "21.6–29.7  tons",
+        "weight": "21.6\u201329.7  tons",
         "wingspan": null
       },
       "imageDownloaded": true,
@@ -1530,6 +1530,56 @@
       "imageVerified": true,
       "listedOnEncyclopedia": false,
       "notes": "Not listed on encyclopedia index page."
+    },
+    {
+      "slug": "tyrannosaurus-rex",
+      "displayName": "Tyrannosaurus rex",
+      "factsAppPageUrl": "https://en.wikipedia.org/wiki/Tyrannosaurus",
+      "localRawImage": "assets/dinos/raw/tyrannosaurus-rex.png",
+      "localOptimizedImage": "assets/dinos/optimized/tyrannosaurus-rex.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "68 million to 66 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "North America, Hell Creek Formation",
+      "dimensions": {
+        "length": "12.3 M",
+        "height": null,
+        "weight": "8.4 tons",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": false,
+      "notes": "Most powerful bite force of any land animal ever"
+    },
+    {
+      "slug": "velociraptor-mongoliensis",
+      "displayName": "Velociraptor mongoliensis",
+      "factsAppPageUrl": "https://en.wikipedia.org/wiki/Velociraptor",
+      "localRawImage": "assets/dinos/raw/velociraptor-mongoliensis.png",
+      "localOptimizedImage": "assets/dinos/optimized/velociraptor-mongoliensis.webp",
+      "periodGroup": "Cretaceous",
+      "timeStagesText": "75 million to 71 million years ago",
+      "foodTypeRaw": [
+        "Meat"
+      ],
+      "mealTypeNormalized": "carnivore",
+      "habitatNormalized": "land",
+      "locationFormation": "Asia, Djadokhta Formation",
+      "dimensions": {
+        "length": "2 M",
+        "height": null,
+        "weight": "15 kg",
+        "wingspan": null
+      },
+      "imageDownloaded": true,
+      "imageVerified": true,
+      "listedOnEncyclopedia": false,
+      "notes": "Feathered raptor with a deadly sickle claw on each foot"
     }
   ]
 }

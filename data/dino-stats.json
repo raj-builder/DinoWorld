@@ -628,7 +628,7 @@
         "name": "Explosive Bite",
         "type": "attack",
         "power": 35,
-        "description": "Name means \"explosion-born lizard\" — bites with fury"
+        "description": "Name means \"explosion-born lizard\" \u2014 bites with fury"
       },
       {
         "name": "Power Charge",
@@ -1076,7 +1076,7 @@
         "name": "Versatile Bite",
         "type": "attack",
         "power": 20,
-        "description": "Mixed dentition handles any food — or foe"
+        "description": "Mixed dentition handles any food \u2014 or foe"
       },
       {
         "name": "Survivor",
@@ -1222,7 +1222,7 @@
         "name": "Pinocchio Rush",
         "type": "attack",
         "power": 25,
-        "description": "Nicknamed \"Pinocchio Rex\" — charges with snout"
+        "description": "Nicknamed \"Pinocchio Rex\" \u2014 charges with snout"
       }
     ],
     "coords": {
@@ -1614,7 +1614,7 @@
         "name": "Styx Dive",
         "type": "defense",
         "power": 0,
-        "description": "Named for the River Styx — vanishes into the deep"
+        "description": "Named for the River Styx \u2014 vanishes into the deep"
       }
     ],
     "coords": {
@@ -1678,5 +1678,61 @@
       "lng": 121
     },
     "battleClass": "bruiser"
+  },
+  "tyrannosaurus-rex": {
+    "stats": {
+      "hp": 195,
+      "attack": 95,
+      "defense": 70,
+      "speed": 40,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Crushing Bite",
+        "type": "attack",
+        "power": 45,
+        "description": "Most powerful bite force of any land animal - 12,800 pounds"
+      },
+      {
+        "name": "Predatory Charge",
+        "type": "attack",
+        "power": 35,
+        "description": "Full-speed charge from the apex predator"
+      }
+    ],
+    "coords": {
+      "lat": 47,
+      "lng": -106
+    },
+    "battleClass": "bruiser"
+  },
+  "velociraptor-mongoliensis": {
+    "stats": {
+      "hp": 81,
+      "attack": 65,
+      "defense": 35,
+      "speed": 85,
+      "stamina": 50
+    },
+    "moves": [
+      {
+        "name": "Sickle Claw",
+        "type": "attack",
+        "power": 35,
+        "description": "Deadly curved claw slashes at vulnerable spots"
+      },
+      {
+        "name": "Pack Tactics",
+        "type": "attack",
+        "power": 30,
+        "description": "Coordinated attack from multiple angles"
+      }
+    ],
+    "coords": {
+      "lat": 44,
+      "lng": 100
+    },
+    "battleClass": "speedster"
   }
 }
