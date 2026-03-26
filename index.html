@@ -80,80 +80,8 @@
         <input type="text" id="search" placeholder="Search species...">
       </div>
     </div>
-    <div class="cards-status">
-      <span id="cards-count">60 species</span>
-      <button class="add-dino-btn" id="add-dino-btn">+ Add Custom Dino</button>
-    </div>
+    <div class="cards-status"><span id="cards-count">60 species</span></div>
     <div id="cards-grid" class="cards-grid"></div>
-
-    <!-- Add Custom Dino Modal -->
-    <div class="modal-overlay" id="add-dino-modal">
-      <div class="modal-card add-dino-form">
-        <button class="modal-close" id="add-dino-close">&times;</button>
-        <h3>Add a Custom Dinosaur</h3>
-        <p class="add-dino-desc">Drop an image and fill in the details to create a new dino card.</p>
-        <div class="add-dino-drop" id="add-dino-drop">
-          <div class="drop-placeholder" id="drop-placeholder">
-            <span class="drop-icon">🖼️</span>
-            <span>Drop image here or <label for="add-dino-file" class="drop-browse">browse</label></span>
-          </div>
-          <img id="add-dino-preview" class="drop-preview hidden" src="" alt="">
-          <input type="file" id="add-dino-file" accept="image/*" hidden>
-        </div>
-        <div class="add-dino-fields">
-          <div class="adf-row">
-            <label>Name *</label>
-            <input type="text" id="adf-name" placeholder="e.g. Spinosaurus" maxlength="40">
-          </div>
-          <div class="adf-row">
-            <label>Source URL</label>
-            <input type="url" id="adf-source" placeholder="https://...">
-          </div>
-          <div class="adf-row adf-row-half">
-            <div>
-              <label>Period</label>
-              <select id="adf-period">
-                <option value="Permian">Permian</option>
-                <option value="Triassic">Triassic</option>
-                <option value="Jurassic">Jurassic</option>
-                <option value="Cretaceous" selected>Cretaceous</option>
-              </select>
-            </div>
-            <div>
-              <label>Diet</label>
-              <select id="adf-diet">
-                <option value="carnivore">Carnivore</option>
-                <option value="herbivore">Herbivore</option>
-                <option value="omnivore">Omnivore</option>
-                <option value="piscivore">Piscivore</option>
-              </select>
-            </div>
-          </div>
-          <div class="adf-row adf-row-half">
-            <div>
-              <label>Habitat</label>
-              <select id="adf-habitat">
-                <option value="land">Land</option>
-                <option value="air">Air</option>
-                <option value="water">Water</option>
-              </select>
-            </div>
-            <div>
-              <label>Length</label>
-              <input type="text" id="adf-length" placeholder="e.g. 15 M">
-            </div>
-          </div>
-          <div class="adf-row">
-            <label>Fun fact (optional)</label>
-            <input type="text" id="adf-fact" placeholder="e.g. Largest known carnivore" maxlength="100">
-          </div>
-        </div>
-        <div class="add-dino-actions">
-          <button class="btn-primary" id="adf-save">Add to Collection</button>
-          <button class="btn-ghost" id="adf-cancel">Cancel</button>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- ══════════ TAB: BATTLE ══════════ -->

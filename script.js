@@ -29,7 +29,6 @@
   ]).then(([cat, st]) => {
     catalog = cat.species;
     stats = st;
-    loadCustomDinos();
     initTabs();
     initMap();
     renderCards();
@@ -185,7 +184,7 @@
     cardsGrid.innerHTML = filtered.map(s => {
       const st = stats[s.slug]?.stats || { hp: 0, attack: 0, defense: 0, speed: 0 };
       return `
-      <div class="card${s.isCustom ? ' custom-card' : ''}" data-slug="${s.slug}">
+      <div class="card" data-slug="${s.slug}">
         <div class="card-img-wrap">
           <img src="${s.localOptimizedImage}" alt="${s.displayName}" loading="lazy">
         </div>
@@ -295,144 +294,6 @@
   document.getElementById('modal-close').addEventListener('click', () => modal.classList.remove('open'));
   modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
-
-  /* ══════════════════════════════════════════════════════
-     ADD CUSTOM DINO
-     ══════════════════════════════════════════════════════ */
-  let customDinos = JSON.parse(localStorage.getItem('dinoworld_custom') || '[]');
-  let addDinoImageData = null;
-
-  // Load saved custom dinos into catalog on startup
-  function loadCustomDinos() {
-    customDinos.forEach(cd => {
-      catalog.push(cd);
-      stats[cd.slug] = cd._stats;
-    });
-  }
-
-  // Open/close add dino modal
-  const addModal = document.getElementById('add-dino-modal');
-  document.getElementById('add-dino-btn').addEventListener('click', () => {
-    resetAddForm();
-    addModal.classList.add('open');
-  });
-  document.getElementById('add-dino-close').addEventListener('click', () => addModal.classList.remove('open'));
-  document.getElementById('adf-cancel').addEventListener('click', () => addModal.classList.remove('open'));
-  addModal.addEventListener('click', e => { if (e.target === addModal) addModal.classList.remove('open'); });
-
-  // Drag & drop image
-  const dropZone = document.getElementById('add-dino-drop');
-  const fileInput = document.getElementById('add-dino-file');
-  const preview = document.getElementById('add-dino-preview');
-  const placeholder = document.getElementById('drop-placeholder');
-
-  dropZone.addEventListener('click', () => fileInput.click());
-  dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
-  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
-  dropZone.addEventListener('drop', e => {
-    e.preventDefault();
-    dropZone.classList.remove('dragover');
-    const file = e.dataTransfer.files[0];
-    if (file && file.type.startsWith('image/')) handleImageFile(file);
-  });
-  fileInput.addEventListener('change', e => {
-    if (e.target.files[0]) handleImageFile(e.target.files[0]);
-  });
-
-  function handleImageFile(file) {
-    const reader = new FileReader();
-    reader.onload = e => {
-      addDinoImageData = e.target.result;
-      preview.src = addDinoImageData;
-      preview.classList.remove('hidden');
-      placeholder.classList.add('hidden');
-    };
-    reader.readAsDataURL(file);
-  }
-
-  function resetAddForm() {
-    addDinoImageData = null;
-    preview.src = '';
-    preview.classList.add('hidden');
-    placeholder.classList.remove('hidden');
-    document.getElementById('adf-name').value = '';
-    document.getElementById('adf-source').value = '';
-    document.getElementById('adf-length').value = '';
-    document.getElementById('adf-fact').value = '';
-    fileInput.value = '';
-  }
-
-  // Save custom dino
-  document.getElementById('adf-save').addEventListener('click', () => {
-    const name = document.getElementById('adf-name').value.trim();
-    if (!name) { showToast('Name is required'); return; }
-    if (!addDinoImageData) { showToast('Please add an image'); return; }
-
-    const slug = 'custom-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-' + Date.now();
-    const period = document.getElementById('adf-period').value;
-    const diet = document.getElementById('adf-diet').value;
-    const habitat = document.getElementById('adf-habitat').value;
-    const length = document.getElementById('adf-length').value.trim();
-    const fact = document.getElementById('adf-fact').value.trim();
-    const source = document.getElementById('adf-source').value.trim();
-
-    // Generate balanced stats
-    const baseAtk = diet === 'carnivore' ? 65 : diet === 'omnivore' ? 55 : 45;
-    const baseDef = diet === 'herbivore' ? 65 : 45;
-    const baseSpd = habitat === 'air' ? 75 : habitat === 'water' ? 55 : 50;
-    const customStats = {
-      hp: 100 + Math.floor(Math.random() * 60),
-      attack: baseAtk + Math.floor(Math.random() * 20),
-      defense: baseDef + Math.floor(Math.random() * 20),
-      speed: baseSpd + Math.floor(Math.random() * 20),
-      stamina: 50 + Math.floor(Math.random() * 30),
-    };
-
-    const customMoves = [
-      { name: 'Custom Strike', type: 'attack', power: 25 + Math.floor(Math.random() * 15), description: fact || 'A powerful custom attack' },
-      { name: 'Primal Roar', type: 'attack', power: 20 + Math.floor(Math.random() * 10), description: 'Intimidates the opponent with a mighty roar' },
-    ];
-
-    const dinoEntry = {
-      slug,
-      displayName: name,
-      factsAppPageUrl: source || '#',
-      localRawImage: '',
-      localOptimizedImage: addDinoImageData, // data URL
-      periodGroup: period,
-      timeStagesText: '',
-      foodTypeRaw: [diet === 'carnivore' ? 'Meat' : diet === 'herbivore' ? 'Plants' : 'Meat, Plants'],
-      mealTypeNormalized: diet,
-      habitatNormalized: habitat,
-      locationFormation: '',
-      dimensions: { length: length || null, height: null, weight: null, wingspan: null },
-      imageDownloaded: true,
-      imageVerified: true,
-      listedOnEncyclopedia: false,
-      isCustom: true,
-      notes: fact,
-      _stats: {
-        stats: customStats,
-        moves: customMoves,
-        coords: { lat: 0, lng: 0 },
-        battleClass: habitat === 'air' ? 'scout' : habitat === 'water' ? 'ambusher' : 'balanced',
-      },
-    };
-
-    // Add to catalog and stats
-    catalog.push(dinoEntry);
-    stats[slug] = dinoEntry._stats;
-
-    // Persist to localStorage
-    customDinos.push(dinoEntry);
-    localStorage.setItem('dinoworld_custom', JSON.stringify(customDinos));
-
-    // Re-render and close
-    renderCards();
-    renderPicker();
-    addModal.classList.remove('open');
-    showToast(`${name} added to your collection!`);
-  });
 
   /* ══════════════════════════════════════════════════════
      BATTLE TAB
