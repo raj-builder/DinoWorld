@@ -9,6 +9,7 @@
     "report": "node scripts/generate-p0-report.js",
     "stats": "node scripts/generate-stats.js",
     "p0": "npm run fetch && npm run optimize && npm run report && npm run stats",
+    "add-dino": "node scripts/add-dino.js",
     "serve": "python3 -m http.server 8080"
   },
   "dependencies": {
